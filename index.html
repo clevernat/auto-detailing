@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RJ Auto Detailing</title>
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Fixed Header/Navigation -->
+    <header>
+      <nav>
+        <div class="logo">RJ Auto Detailing</div>
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu - Hidden by default, shown when toggled -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero Section - Full-height landing area with CTA -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Elevate Your <span id="typewriter-text"></span></h1>
+          <p class="fade-in-text">
+            Precision Detailing for Those Who Appreciate Automotive Excellence
+          </p>
+          <!-- Primary Call-to-Action Button - Opens booking modal -->
+          <button class="cta-button">Book Your Transformation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section - Company information and key features -->
+    <section class="about" id="about">
+      <div class="container">
+        <!-- Left side - Image with 3D effect and experience badge -->
+        <div class="about-image">
+          <div class="about-image-container">
+            <img
+              src="https://placehold.co/600x700"
+              alt="About RJ Auto Detailing"
+            />
+          </div>
+          <div class="experience-badge">10+ Years Experience</div>
+        </div>
+
+        <!-- Right side - Company information and features -->
+        <div class="about-content">
+          <span class="about-subtitle">About Us</span>
+          <h2>Professional Auto Detailing Services</h2>
+          <p>
+            RJ Auto Detailing is dedicated to providing meticulous care for
+            vehicles, ensuring that every detail is attended to with precision.
+            With over a decade of experience, we've built a reputation for
+            excellence and customer satisfaction.
+          </p>
+          <p>
+            Our team of certified professionals uses only premium products and
+            advanced techniques to deliver exceptional results that enhance both
+            the appearance and longevity of your vehicle.
+          </p>
+
+          <!-- Key features grid - 2x2 on desktop -->
+          <div class="about-features">
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <div class="about-feature-text">
+                <h4>Premium Products</h4>
+                <p>
+                  We use only high-quality, eco-friendly detailing products.
+                </p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <div class="about-feature-text">
+                <h4>Expert Technicians</h4>
+                <p>Our team is certified and extensively trained.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <div class="about-feature-text">
+                <h4>Mobile Service</h4>
+                <p>We bring our expertise directly to your location.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <div class="about-feature-text">
+                <h4>Satisfaction Guaranteed</h4>
+                <p>We're not happy until you're completely satisfied.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call-to-action buttons -->
+          <div class="about-cta">
+            <button class="cta-button">Book a Service</button>
+            <a href="#services" class="about-cta-secondary"
+              >Explore Services <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section - Horizontally scrollable service cards -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <!-- Horizontally scrollable service cards on mobile -->
+        <div class="services-grid">
+          <!-- Interior Detailing Service Card -->
+          <div class="service-card">
+            <i class="fas fa-car"></i>
+            <h3>Interior Detailing</h3>
+            <p>
+              Deep cleaning of all interior surfaces including carpets,
+              upholstery, dashboard, and console. We treat leather, eliminate
+              odors, and apply protective coatings for a fresh, renewed cabin.
+            </p>
+          </div>
+
+          <!-- Exterior Detailing Service Card -->
+          <div class="service-card">
+            <i class="fas fa-spray-can"></i>
+            <h3>Exterior Detailing</h3>
+            <p>
+              Thorough hand wash, clay bar treatment, polishing to remove swirl
+              marks, and premium wax application. Includes tire dressing, wheel
+              detailing, and trim restoration.
+            </p>
+          </div>
+
+          <!-- Full Detail Package Service Card -->
+          <div class="service-card">
+            <i class="fas fa-car-side"></i>
+            <h3>Full Detail Package</h3>
+            <p>
+              Complete interior and exterior transformation. Perfect for
+              preparing your vehicle for sale, special occasions, or treating
+              yourself to a like-new driving experience.
+            </p>
+          </div>
+
+          <!-- Mobile Services Card -->
+          <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Mobile Services</h3>
+            <p>
+              We bring our professional detailing directly to your location. Our
+              fully-equipped mobile unit provides the same high-quality service
+              at your home or workplace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section - Service packages with tiered pricing -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Our Pricing</h2>
+        <div class="pricing-container">
+          <!-- Basic Package - Entry level service -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Basic Package</h3>
+              <div class="price">$99<span>/service</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Exterior Hand Wash</li>
+                <li>Tire & Wheel Cleaning</li>
+                <li>Vacuum Interior</li>
+                <li>Dashboard & Console Wipe Down</li>
+                <li>Window Cleaning</li>
+                <li class="not-included">Clay Bar Treatment</li>
+                <li class="not-included">Paint Polishing</li>
+                <li class="not-included">Engine Bay Cleaning</li>
+              </ul>
+              <button class="cta-button">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Premium Package - Most popular option with featured badge -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Premium Package</h3>
+              <div class="price">$179<span>/service</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Everything in Basic Package</li>
+                <li>Clay Bar Treatment</li>
+                <li>Paint Polishing</li>
+                <li>Wax Application</li>
+                <li>Deep Interior Cleaning</li>
+                <li>Leather Conditioning</li>
+                <li class="not-included">Engine Bay Cleaning</li>
+                <li class="not-included">Headlight Restoration</li>
+              </ul>
+              <button class="cta-button">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Deluxe Package - Comprehensive service option -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Deluxe Package</h3>
+              <div class="price">$249<span>/service</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Everything in Premium Package</li>
+                <li>Engine Bay Cleaning</li>
+                <li>Headlight Restoration</li>
+                <li>Paint Sealant Application</li>
+                <li>Carpet Shampooing</li>
+                <li>Odor Elimination</li>
+                <li>Trim Restoration</li>
+              </ul>
+              <button class="cta-button">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section - Filterable portfolio of work -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Work</h2>
+          <p>Explore our portfolio of exceptional detailing projects</p>
+        </div>
+
+        <!-- Category filter buttons -->
+        <div class="gallery-filter">
+          <button class="gallery-filter-btn active" data-filter="all">
+            All
+          </button>
+          <button class="gallery-filter-btn" data-filter="interior">
+            Interior
+          </button>
+          <button class="gallery-filter-btn" data-filter="exterior">
+            Exterior
+          </button>
+          <button class="gallery-filter-btn" data-filter="full">
+            Full Detail
+          </button>
+          <button class="gallery-filter-btn" data-filter="restoration">
+            Restoration
+          </button>
+        </div>
+
+        <!-- Gallery grid with different sized items -->
+        <div class="gallery-grid">
+          <!-- Large featured project - spans 2x2 grid cells -->
+          <div class="gallery-item large" data-category="full">
+            <div class="gallery-badge">Featured</div>
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Luxury Car Detail"
+              />
+              <div class="gallery-overlay">
+                <h4>Premium Full Detail</h4>
+                <p>
+                  Complete transformation of a luxury sports car with our
+                  signature detailing package.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wide project - spans 2x1 grid cells -->
+          <div class="gallery-item wide" data-category="exterior">
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1236&q=80"
+                alt="Paint Correction"
+              />
+              <div class="gallery-overlay">
+                <h4>Paint Correction & Ceramic Coating</h4>
+                <p>
+                  Professional paint restoration with long-lasting ceramic
+                  protection.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regular project - standard 1x1 grid cell -->
+          <div class="gallery-item" data-category="interior">
+            <div class="gallery-badge">New</div>
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1583836631365-2d4dd298a8bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Interior Detail"
+              />
+              <div class="gallery-overlay">
+                <h4>Luxury Interior Detailing</h4>
+                <p>
+                  Deep cleaning and conditioning of premium leather and
+                  surfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tall project - spans 1x2 grid cells -->
+          <div class="gallery-item tall" data-category="restoration">
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+                alt="Headlight Restoration"
+              />
+              <div class="gallery-overlay">
+                <h4>Headlight Restoration</h4>
+                <p>
+                  Transforming cloudy, yellowed headlights to crystal clear
+                  condition for improved visibility and appearance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional gallery items with different categories -->
+          <div class="gallery-item" data-category="exterior">
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Wheel Detailing"
+              />
+              <div class="gallery-overlay">
+                <h4>Wheel & Tire Detailing</h4>
+                <p>
+                  Professional cleaning and protection for wheels and tires.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="interior">
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                alt="Dashboard Detail"
+              />
+              <div class="gallery-overlay">
+                <h4>Dashboard & Console Detailing</h4>
+                <p>
+                  Thorough cleaning and UV protection for interior surfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item wide" data-category="full">
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+                alt="SUV Detailing"
+              />
+              <div class="gallery-overlay">
+                <h4>SUV Complete Transformation</h4>
+                <p>
+                  Comprehensive interior and exterior detailing for family
+                  vehicles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="restoration">
+            <div class="gallery-badge">Popular</div>
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                alt="Trim Restoration"
+              />
+              <div class="gallery-overlay">
+                <h4>Trim & Plastic Restoration</h4>
+                <p>
+                  Reviving faded exterior trim and plastic components to
+                  like-new condition.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="interior">
+            <div class="gallery-badge">Premium</div>
+            <div class="gallery-item-content">
+              <img
+                src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Luxury Car Interior"
+              />
+              <div class="gallery-overlay">
+                <h4>Premium Leather Treatment</h4>
+                <p>
+                  Specialized cleaning and conditioning for high-end leather
+                  interiors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section - Client reviews and feedback -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+          <!-- Testimonial Card 1 -->
+          <div class="testimonial-card">
+            <!-- 5-star rating display -->
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              RJ Auto Detailing transformed my 5-year-old car into what looks
+              like a brand new vehicle. The attention to detail was impressive,
+              and the convenience of their mobile service made the experience
+              even better. Highly recommend!
+            </p>
+            <!-- Client information with avatar -->
+            <div class="testimonial-author">
+              <img src="https://placehold.co/100x100" alt="Client 1" />
+              <div class="author-info">
+                <h4>Michael Johnson</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Denver, CO</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              I've tried several detailing services in the area, but RJ Auto
+              Detailing stands out for their professionalism and quality of
+              work. They removed stains from my seats that I thought were
+              permanent. My car hasn't looked this good since I bought it!
+            </p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/100x100" alt="Client 2" />
+              <div class="author-info">
+                <h4>Sarah Williams</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Aurora, CO</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">
+              The team at RJ Auto Detailing went above and beyond with my SUV.
+              They were punctual, professional, and the results exceeded my
+              expectations. The ceramic coating they applied has kept my car
+              looking amazing for months. Worth every penny!
+            </p>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/100x100" alt="Client 3" />
+              <div class="author-info">
+                <h4>David Rodriguez</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Lakewood, CO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section - Contact information and form -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+          <!-- Left side - Contact information cards -->
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p class="contact-intro">
+              Have questions or ready to schedule a service? Reach out to us
+              using any of the methods below or fill out the form and we'll get
+              back to you promptly.
+            </p>
+
+            <!-- Location information card -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Our Location</h4>
+                <p>1234 Detail Drive, Denver, CO 80202</p>
+                <p>Service available throughout Denver metro area</p>
+              </div>
+            </div>
+
+            <!-- Phone information card -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Call Us</h4>
+                <p>(303) 555-1234</p>
+                <p>Mon-Fri: 8am - 6pm, Sat: 9am - 4pm</p>
+              </div>
+            </div>
+
+            <!-- Email information card -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email Us</h4>
+                <p>info@rjautodetailing.com</p>
+                <p>We respond within 24 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side - Contact form -->
+          <form class="contact-form">
+            <h3>Send Us a Message</h3>
+            <!-- Two-column form layout for name and phone -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your phone number"
+                />
+              </div>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email address"
+                required
+              />
+            </div>
+
+            <!-- Service selection dropdown -->
+            <div class="form-group">
+              <label for="service"
+                ><i class="fas fa-car"></i> Service Interested In</label
+              >
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service</option>
+                <option value="interior">Interior Detailing</option>
+                <option value="exterior">Exterior Detailing</option>
+                <option value="full">Full Detail Package</option>
+                <option value="mobile">Mobile Services</option>
+              </select>
+            </div>
+
+            <!-- Message textarea -->
+            <div class="form-group">
+              <label for="message"
+                ><i class="fas fa-comment"></i> Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us about your vehicle and service needs"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Site information, links, and newsletter -->
+    <footer>
+      <!-- Decorative wave SVG at top of footer -->
+      <div class="footer-wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="footer-container">
+          <!-- Company information and social links -->
+          <div class="footer-about">
+            <div class="footer-logo">RJ Auto Detailing</div>
+            <p>
+              Providing premium auto detailing services to keep your vehicle
+              looking its best. Our professional team is dedicated to excellence
+              and customer satisfaction throughout the Denver metro area.
+            </p>
+            <!-- Social media links -->
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick navigation links -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+              </li>
+              <li>
+                <a href="#about"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#services"
+                  ><i class="fas fa-chevron-right"></i> Services</a
+                >
+              </li>
+              <li>
+                <a href="#pricing"
+                  ><i class="fas fa-chevron-right"></i> Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#gallery"
+                  ><i class="fas fa-chevron-right"></i> Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#testimonials"
+                  ><i class="fas fa-chevron-right"></i> Testimonials</a
+                >
+              </li>
+              <li>
+                <a href="#contact"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact information -->
+          <div class="footer-contact">
+            <h3>Contact Info</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>1234 Detail Drive, Denver, CO 80202</span>
+            </p>
+            <p><i class="fas fa-phone-alt"></i> <span>(303) 555-1234</span></p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <span>info@rjautodetailing.com</span>
+            </p>
+            <p>
+              <i class="fas fa-clock"></i>
+              <span>Mon-Fri: 8am-6pm, Sat: 9am-4pm</span>
+            </p>
+          </div>
+
+          <!-- Newsletter subscription form -->
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>
+              Subscribe to our newsletter to receive special offers, detailing
+              tips, and updates.
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <p>
+              We respect your privacy and will never share your information.
+            </p>
+          </div>
+        </div>
+
+        <!-- Copyright information -->
+        <div class="copyright">
+          <p>
+            &copy; 2025 RJ Auto Detailing. All Rights Reserved. Designed with
+            <i class="fas fa-heart" style="color: var(--accent-color)"></i> by
+            <a href="#">YourCompany</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal - Hidden by default, shown when booking buttons are clicked -->
+    <div class="booking-modal-overlay">
+      <div class="booking-modal">
+        <!-- Close button -->
+        <button class="booking-modal-close" aria-label="Close">&times;</button>
+
+        <!-- Modal header -->
+        <div class="booking-modal-header">
+          <h2>Book Your Auto Detailing Service</h2>
+          <p>Select your desired services and provide your details</p>
+        </div>
+
+        <!-- Booking form -->
+        <form class="booking-form" id="bookingForm">
+          <!-- Service selection checkboxes -->
+          <div class="booking-modal-services">
+            <input
+              type="checkbox"
+              id="interior"
+              name="services"
+              value="interior"
+              class="service-checkbox"
+            />
+            <label for="interior" class="service-label">
+              <span>Interior Detailing</span>
+            </label>
+
+            <input
+              type="checkbox"
+              id="exterior"
+              name="services"
+              value="exterior"
+              class="service-checkbox"
+            />
+            <label for="exterior" class="service-label">
+              <span>Exterior Detailing</span>
+            </label>
+
+            <input
+              type="checkbox"
+              id="full"
+              name="services"
+              value="full"
+              class="service-checkbox"
+            />
+            <label for="full" class="service-label">
+              <span>Full Detail Package</span>
+            </label>
+
+            <input
+              type="checkbox"
+              id="mobile"
+              name="services"
+              value="mobile"
+              class="service-checkbox"
+            />
+            <label for="mobile" class="service-label">
+              <span>Mobile Service</span>
+            </label>
+          </div>
+
+          <!-- Contact information fields - Name and Phone -->
+          <div class="booking-form-row">
+            <div class="booking-form-group">
+              <label for="bookingName">Full Name</label>
+              <input
+                type="text"
+                id="bookingName"
+                name="name"
+                required
+                placeholder="Your full name"
+              />
+            </div>
+            <div class="booking-form-group">
+              <label for="bookingPhone">Phone Number</label>
+              <input
+                type="tel"
+                id="bookingPhone"
+                name="phone"
+                required
+                placeholder="(xxx) xxx-xxxx"
+              />
+            </div>
+          </div>
+
+          <!-- Email field -->
+          <div class="booking-form-group">
+            <label for="bookingEmail">Email Address</label>
+            <input
+              type="email"
+              id="bookingEmail"
+              name="email"
+              required
+              placeholder="your.email@example.com"
+            />
+          </div>
+
+          <!-- Date and time selection -->
+          <div class="booking-form-row">
+            <div class="booking-form-group">
+              <label for="bookingDate">Preferred Date</label>
+              <input type="date" id="bookingDate" name="date" required />
+            </div>
+            <div class="booking-form-group">
+              <label for="bookingTime">Preferred Time</label>
+              <select id="bookingTime" name="time" required>
+                <option value="">Select Time</option>
+                <option value="morning">Morning (8am-12pm)</option>
+                <option value="afternoon">Afternoon (12pm-4pm)</option>
+                <option value="evening">Evening (4pm-6pm)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Additional notes textarea -->
+          <div class="booking-form-group">
+            <label for="bookingNotes">Additional Notes</label>
+            <textarea
+              id="bookingNotes"
+              name="notes"
+              rows="4"
+              placeholder="Any specific requirements or vehicle details"
+            ></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="booking-form-submit">
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // ===== MOBILE MENU FUNCTIONALITY =====
+      // Get DOM elements for mobile menu
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      // Toggle mobile menu visibility when menu button is clicked
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        mobileMenuBtn.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking a nav link
+      const mobileNavLinks = document.querySelectorAll(".mobile-menu a");
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          mobileMenuBtn.classList.remove("active");
+        });
+      });
+
+      // ===== DEVICE DETECTION =====
+      // Check if device is touch-enabled for optimizing interactions
+      const isTouchDevice = () => {
+        return (
+          "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0 ||
+          navigator.msMaxTouchPoints > 0
+        );
+      };
+
+      // Add touch-device class to body if needed for CSS targeting
+      if (isTouchDevice()) {
+        document.body.classList.add("touch-device");
+      }
+
+      // ===== GALLERY FILTERING FUNCTIONALITY =====
+      const filterButtons = document.querySelectorAll(".gallery-filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          // Get the filter value (category) from the button
+          const filterValue = button.getAttribute("data-filter");
+
+          // Filter gallery items based on their category
+          galleryItems.forEach((item) => {
+            // Get item category
+            const itemCategory = item.getAttribute("data-category");
+
+            // Show/hide based on filter
+            if (filterValue === "all" || filterValue === itemCategory) {
+              item.style.display = "flex";
+              // Add animation - different for touch devices
+              setTimeout(() => {
+                item.style.transform = isTouchDevice() ? "none" : "scale(1)";
+                item.style.opacity = "1";
+              }, 50);
+            } else {
+              item.style.transform = isTouchDevice() ? "none" : "scale(0.8)";
+              item.style.opacity = "0";
+              setTimeout(() => {
+                item.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // ===== SCROLL ANIMATION FOR GALLERY =====
+      // Add animation when gallery items come into view
+      const animateOnScroll = () => {
+        const gallerySection = document.querySelector(".gallery");
+        const galleryPosition = gallerySection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        // If gallery section is in viewport
+        if (galleryPosition < screenPosition) {
+          // Animate each gallery item with a staggered delay
+          galleryItems.forEach((item, index) => {
+            setTimeout(
+              () => {
+                item.classList.add("animate-in");
+              },
+              isTouchDevice() ? 50 : 100 * index
+            );
+          });
+          // Remove scroll listener once animation is triggered
+          window.removeEventListener("scroll", animateOnScroll);
+        }
+      };
+
+      // ===== SCROLL PERFORMANCE OPTIMIZATION =====
+      // Optimize scrolling performance by reducing animations during scroll
+      let scrollTimeout;
+      window.addEventListener(
+        "scroll",
+        function () {
+          // Add a class during scroll to reduce animations
+          document.body.classList.add("is-scrolling");
+
+          // Call animate on scroll function
+          animateOnScroll();
+
+          // Remove the class after scrolling stops (debounce)
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            document.body.classList.remove("is-scrolling");
+          }, 100);
+        },
+        { passive: true } // Improve scroll performance
+      );
+
+      // ===== BACK TO TOP BUTTON FUNCTIONALITY =====
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      // Show button when user scrolls down 300px from the top
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("visible");
+        } else {
+          backToTopButton.classList.remove("visible");
+        }
+      });
+
+      // Smooth scroll to top when button is clicked
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // ===== DOCUMENT READY FUNCTIONALITY =====
+      // Trigger animation if gallery is already in view on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        animateOnScroll();
+
+        // ===== MOBILE TOUCH INTERACTIONS =====
+        // Add tap/click functionality for mobile gallery items
+        if (isTouchDevice()) {
+          galleryItems.forEach((item) => {
+            item.addEventListener("click", function () {
+              const overlay = this.querySelector(".gallery-overlay");
+
+              // Toggle a class to show/hide the full overlay
+              if (overlay.style.transform === "translateY(0px)") {
+                overlay.style.transform = "translateY(65%)";
+              } else {
+                overlay.style.transform = "translateY(0px)";
+
+                // Hide other overlays when one is opened
+                galleryItems.forEach((otherItem) => {
+                  if (otherItem !== item) {
+                    const otherOverlay =
+                      otherItem.querySelector(".gallery-overlay");
+                    if (otherOverlay) {
+                      otherOverlay.style.transform = "translateY(65%)";
+                    }
+                  }
+                });
+              }
+            });
+          });
+        }
+
+        // ===== ORIENTATION CHANGE HANDLER =====
+        // Handle device orientation changes
+        window.addEventListener("orientationchange", function () {
+          // Small delay to allow the browser to complete the orientation change
+          setTimeout(() => {
+            // Recalculate layout for gallery items
+            galleryItems.forEach((item) => {
+              item.style.opacity = "1";
+              item.style.transform = "none";
+            });
+          }, 300);
+        });
+      });
+
+      // ===== BOOKING MODAL FUNCTIONALITY =====
+      const bookingButtons = document.querySelectorAll(".cta-button");
+      const bookingModalOverlay = document.querySelector(
+        ".booking-modal-overlay"
+      );
+      const bookingModal = document.querySelector(".booking-modal");
+      const bookingModalClose = document.querySelector(".booking-modal-close");
+      const bookingForm = document.getElementById("bookingForm");
+
+      // Open Booking Modal when any CTA button is clicked
+      bookingButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          bookingModalOverlay.classList.add("active");
+          bookingModal.classList.add("active");
+        });
+      });
+
+      // Close Booking Modal when close button is clicked
+      bookingModalClose.addEventListener("click", () => {
+        bookingModalOverlay.classList.remove("active");
+        bookingModal.classList.remove("active");
+      });
+
+      // Close Modal when clicking outside the modal content
+      bookingModalOverlay.addEventListener("click", (e) => {
+        if (e.target === bookingModalOverlay) {
+          bookingModalOverlay.classList.remove("active");
+          bookingModal.classList.remove("active");
+        }
+      });
+
+      // ===== FORM SUBMISSION HANDLING =====
+      bookingForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Collect form data
+        const formData = new FormData(bookingForm);
+        const bookingDetails = {};
+
+        // Convert FormData to object for easier handling
+        for (let [key, value] of formData.entries()) {
+          if (key === "services") {
+            // Handle multiple service selections
+            if (!bookingDetails[key]) bookingDetails[key] = [];
+            bookingDetails[key].push(value);
+          } else {
+            bookingDetails[key] = value;
+          }
+        }
+
+        // Basic validation - ensure at least one service is selected
+        const selectedServices = bookingDetails.services || [];
+        if (selectedServices.length === 0) {
+          alert("Please select at least one service.");
+          return;
+        }
+
+        // Log booking details to console (for development)
+        console.log("Booking Details:", bookingDetails);
+
+        // Show success message to user
+        alert(`Thank you, ${bookingDetails.name}! 
+Your booking for ${selectedServices.join(", ")} services has been received. 
+We'll contact you at ${bookingDetails.phone} to confirm the details.`);
+
+        // Reset form and close modal
+        bookingForm.reset();
+        bookingModalOverlay.classList.remove("active");
+        bookingModal.classList.remove("active");
+      });
+      // ===== ROTATING TYPEWRITER EFFECT =====
+      document.addEventListener("DOMContentLoaded", function () {
+        // Words that will rotate in the typewriter effect
+        const words = [
+          "Vehicle's Elegance",
+          "Automotive Experience",
+          "Car's Appearance",
+          "Driving Pleasure",
+          "Vehicle's Brilliance",
+        ];
+
+        const typewriterElement = document.getElementById("typewriter-text");
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isWaiting = false;
+
+        function typeEffect() {
+          const currentWord = words[wordIndex];
+
+          // Set typing speed - faster when deleting
+          const typingSpeed = isDeleting ? 50 : 100;
+
+          if (!isWaiting) {
+            // If typing
+            if (!isDeleting && charIndex < currentWord.length) {
+              typewriterElement.textContent = currentWord.substring(
+                0,
+                charIndex + 1
+              );
+              charIndex++;
+            }
+            // If deleting
+            else if (isDeleting && charIndex > 0) {
+              typewriterElement.textContent = currentWord.substring(
+                0,
+                charIndex - 1
+              );
+              charIndex--;
+            }
+
+            // If word is complete, wait then start deleting
+            if (!isDeleting && charIndex === currentWord.length) {
+              isWaiting = true;
+              setTimeout(() => {
+                isDeleting = true;
+                isWaiting = false;
+              }, 1500); // Wait time at end of word
+            }
+
+            // If deletion is complete, move to next word
+            else if (isDeleting && charIndex === 0) {
+              isDeleting = false;
+              wordIndex = (wordIndex + 1) % words.length;
+            }
+          }
+
+          // Call function again after delay
+          setTimeout(typeEffect, typingSpeed);
+        }
+
+        // Start the effect
+        setTimeout(typeEffect, 500);
+      });
+    </script>
+    <!-- Performance Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
