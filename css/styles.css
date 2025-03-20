@@ -198,7 +198,7 @@ nav {
 
 /* Rotate icon when menu is active */
 .mobile-menu-btn.active i {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 /* ===== HERO SECTION ===== */
@@ -1164,6 +1164,8 @@ p {
   grid-auto-rows: minmax(180px, auto);
   gap: 1.5rem;
   grid-auto-flow: dense;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .gallery-item {
@@ -1281,6 +1283,7 @@ p {
   justify-content: flex-end;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -1360,7 +1363,11 @@ p {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: var(--accent-color);
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    rgba(200, 16, 46, 0.5)
+  );
   border-radius: 3px;
 }
 
@@ -1378,6 +1385,7 @@ p {
   position: relative;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .gallery-filter-btn::before {
@@ -1399,10 +1407,12 @@ p {
   color: var(--text-light);
   background-color: var(--accent-color);
   box-shadow: 0 5px 15px rgba(200, 16, 46, 0.3);
+  border-color: var(--accent-color);
 }
 
 .gallery-filter-btn:hover:not(.active) {
   color: var(--text-light);
+  border-color: var(--accent-color);
 }
 
 .gallery-filter-btn:hover:not(.active)::before {
@@ -1415,7 +1425,7 @@ p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--accent-color), #a00d24);
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 30px;
@@ -1428,6 +1438,7 @@ p {
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .gallery-item:hover .gallery-badge {
@@ -2211,64 +2222,67 @@ footer::before {
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 70px; /* Position below the header */
   left: 0;
   width: 100%;
   background-color: var(--primary-color);
   z-index: 1000;
   padding: 0;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-100%);
-  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
   max-width: 100vw;
 }
 
 .mobile-menu.active {
   transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .mobile-menu ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.25rem;
+  flex-direction: column;
+  padding: 0.5rem 0;
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
 }
 
 .mobile-menu li {
   margin: 0;
   padding: 0;
-  flex: 1;
-  text-align: center;
-  min-width: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu li:last-child {
+  border-bottom: none;
 }
 
 .mobile-menu a {
   color: var(--text-light);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 1rem;
   display: block;
-  transition: color 0.3s;
-  padding: 0.5rem 0.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  transition: all 0.3s;
+  padding: 1rem 1.5rem;
+  text-align: left;
 }
 
 .mobile-menu a:hover {
   color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 2rem;
 }
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   header {
     padding: 0.8rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
   }
 
   nav {
@@ -2278,6 +2292,8 @@ footer::before {
 
   .logo {
     font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
 
   .nav-links {
@@ -2289,14 +2305,49 @@ footer::before {
     margin-left: auto;
   }
 
-  /* Adjust padding for sections to account for horizontal mobile menu */
+  /* Adjust padding for sections to account for mobile menu */
   section {
-    padding-top: 4.5rem !important;
+    padding-top: 5rem !important;
   }
 
   /* Adjust hero section for mobile */
   .hero {
-    padding-top: 4.5rem !important;
+    padding-top: 5rem !important;
+  }
+
+  /* Improve gallery display on mobile */
+  .gallery-grid {
+    gap: 1.2rem;
+  }
+
+  .gallery-item {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+  }
+
+  .gallery-item img {
+    border-radius: 12px;
+  }
+
+  /* Enhance mobile buttons */
+  .cta-button {
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(200, 16, 46, 0.2);
+  }
+
+  /* Improve section titles on mobile */
+  .section-title,
+  .section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 
@@ -2306,20 +2357,40 @@ footer::before {
   }
 
   nav {
-    padding: 0 0.1rem;
+    padding: 0 0.8rem;
   }
 
   .logo {
     font-size: 1.2rem;
   }
 
-  .mobile-menu ul {
-    padding: 0.4rem 0.2rem;
+  /* Improve gallery display on small mobile */
+  .gallery-grid {
+    gap: 1rem;
   }
 
-  .mobile-menu a {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.2rem;
+  .gallery-item {
+    min-height: 220px;
+  }
+
+  /* Enhance filter buttons on mobile */
+  .gallery-filter {
+    gap: 0.5rem;
+  }
+
+  .gallery-filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* Improve section spacing on mobile */
+  section {
+    padding: 4rem 0 !important;
+  }
+
+  .section-title,
+  .section-header h2 {
+    font-size: 1.8rem;
   }
 }
 
@@ -2336,9 +2407,19 @@ footer::before {
     padding: 0.4rem;
   }
 
-  .mobile-menu a {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.15rem;
+  /* Further optimize for very small screens */
+  .gallery-filter-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .gallery-item {
+    min-height: 200px;
+  }
+
+  .section-title,
+  .section-header h2 {
+    font-size: 1.6rem;
   }
 }
 
