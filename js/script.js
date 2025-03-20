@@ -8,19 +8,11 @@ mobileMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
   mobileMenuBtn.classList.toggle("active");
 
-  // Add animation to menu items
-  const menuItems = document.querySelectorAll(".mobile-menu li");
+  // Prevent body scrolling when menu is open
   if (mobileMenu.classList.contains("active")) {
-    menuItems.forEach((item, index) => {
-      item.style.opacity = "0";
-      item.style.transform = "translateY(-10px)";
-      setTimeout(() => {
-        item.style.transition = "all 0.3s ease-in-out";
-        item.style.transitionDelay = `${index * 0.05}s`;
-        item.style.opacity = "1";
-        item.style.transform = "translateY(0)";
-      }, 50);
-    });
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
   }
 });
 
@@ -30,6 +22,7 @@ mobileNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
     mobileMenuBtn.classList.remove("active");
+    document.body.style.overflow = "";
   });
 });
 
@@ -42,7 +35,107 @@ document.addEventListener("click", (e) => {
   ) {
     mobileMenu.classList.remove("active");
     mobileMenuBtn.classList.remove("active");
+    document.body.style.overflow = "";
   }
+});
+
+// ===== LAZY LOADING IMPLEMENTATION =====
+document.addEventListener("DOMContentLoaded", function () {
+  // Lazy loading for images with fallback
+  const lazyImages = document.querySelectorAll(".lazy-image");
+
+  // Options for Intersection Observer
+  const options = {
+    root: null, // viewport
+    rootMargin: "0px",
+    threshold: 0.1, // 10% of the item must be visible
+  };
+
+  // Load image function with error handling
+  function loadImage(image) {
+    const src = image.getAttribute("data-src");
+
+    // Create a new image to test loading
+    const tempImage = new Image();
+
+    // Set up success handler
+    tempImage.onload = function () {
+      // Replace placeholder with actual image
+      image.src = src;
+      image.classList.add("loaded");
+
+      // Find parent placeholder container and add a class to fade it out
+      const placeholderContainer = image.previousElementSibling;
+      if (
+        placeholderContainer &&
+        placeholderContainer.classList.contains("placeholder-container")
+      ) {
+        placeholderContainer.style.opacity = "0";
+
+        // Remove placeholder after transition
+        setTimeout(() => {
+          placeholderContainer.style.display = "none";
+        }, 300);
+      }
+    };
+
+    // Set up error handler
+    tempImage.onerror = function () {
+      // Keep placeholder visible but add error message
+      const placeholderContainer = image.previousElementSibling;
+      if (placeholderContainer) {
+        // Create error message element
+        const errorMsg = document.createElement("div");
+        errorMsg.className = "image-error-message";
+        errorMsg.textContent = "Image could not be loaded";
+        placeholderContainer.appendChild(errorMsg);
+
+        // Add low-quality fallback image if available
+        const fallbackSrc = image.getAttribute("data-fallback");
+        if (fallbackSrc) {
+          image.src = fallbackSrc;
+          image.classList.add("fallback-loaded");
+        }
+      }
+    };
+
+    // Start loading the image
+    tempImage.src = src;
+  }
+
+  // Use Intersection Observer if supported
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    // Observe all lazy images
+    lazyImages.forEach((image) => {
+      observer.observe(image);
+    });
+  } else {
+    // Fallback for browsers that don't support Intersection Observer
+    lazyImages.forEach((image) => {
+      loadImage(image);
+    });
+  }
+
+  // Add timeout for slow connections
+  setTimeout(() => {
+    lazyImages.forEach((image) => {
+      if (
+        !image.classList.contains("loaded") &&
+        !image.classList.contains("fallback-loaded")
+      ) {
+        loadImage(image);
+      }
+    });
+  }, 3000); // 3 seconds timeout
 });
 
 // ===== DEVICE DETECTION =====
@@ -237,7 +330,6 @@ bookingModalOverlay.addEventListener("click", (e) => {
     bookingModal.classList.remove("active");
   }
 });
-
 // ===== FORM SUBMISSION HANDLING =====
 bookingForm.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent default form submission
@@ -277,6 +369,7 @@ We'll contact you at ${bookingDetails.phone} to confirm the details.`);
   bookingModalOverlay.classList.remove("active");
   bookingModal.classList.remove("active");
 });
+
 // ===== ROTATING TYPEWRITER EFFECT =====
 document.addEventListener("DOMContentLoaded", function () {
   // Words that will rotate in the typewriter effect
@@ -334,150 +427,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Start the effect
   setTimeout(typeEffect, 500);
-});
-
-// Enhanced Gallery Functionality for Mobile and Hover Effects
-document.addEventListener("DOMContentLoaded", function () {
-  // Get all gallery items
-  const galleryItems = document.querySelectorAll(".gallery-item");
-
-  // Check if device is touch-enabled
-  const isTouchDevice = () => {
-    return (
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      navigator.msMaxTouchPoints > 0
-    );
-  };
-
-  // Add touch-device class to body if needed
-  if (isTouchDevice()) {
-    document.body.classList.add("touch-device");
-  }
-
-  // Enhance gallery items for mobile view
-  function enhanceGalleryForMobile() {
-    // Adjust gallery grid layout based on screen width
-    const galleryGrid = document.querySelector(".gallery-grid");
-    if (window.innerWidth <= 480) {
-      // For very small screens
-      galleryItems.forEach((item) => {
-        // Reset all items to take full width on small screens
-        item.style.gridColumn = "span 12";
-        // Ensure minimum height for visibility
-        item.style.minHeight = "250px";
-      });
-    } else if (window.innerWidth <= 768) {
-      // For medium screens (tablets)
-      galleryItems.forEach((item) => {
-        if (item.classList.contains("large")) {
-          item.style.gridColumn = "span 12";
-        } else if (item.classList.contains("wide")) {
-          item.style.gridColumn = "span 12";
-        } else {
-          item.style.gridColumn = "span 6";
-        }
-      });
-    }
-
-    // Center gallery items on mobile
-    if (window.innerWidth <= 768) {
-      galleryGrid.style.justifyItems = "center";
-    } else {
-      galleryGrid.style.justifyItems = "stretch";
-    }
-
-    // Enhance touch interactions for gallery items
-    if (isTouchDevice()) {
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          const overlay = this.querySelector(".gallery-overlay");
-
-          // Toggle overlay visibility on tap
-          if (overlay.style.transform === "translateY(0px)") {
-            overlay.style.transform = "translateY(65%)";
-          } else {
-            overlay.style.transform = "translateY(0px)";
-
-            // Hide other overlays when one is opened
-            galleryItems.forEach((otherItem) => {
-              if (otherItem !== item) {
-                const otherOverlay =
-                  otherItem.querySelector(".gallery-overlay");
-                if (otherOverlay) {
-                  otherOverlay.style.transform = "translateY(65%)";
-                }
-              }
-            });
-          }
-        });
-      });
-    }
-  }
-
-  // Enhance hover effects for gallery items
-  function enhanceGalleryHoverEffects() {
-    galleryItems.forEach((item) => {
-      const overlay = item.querySelector(".gallery-overlay");
-      const heading = overlay.querySelector("h4");
-      const paragraph = overlay.querySelector("p");
-
-      // Add hover event listeners if not a touch device
-      if (!isTouchDevice()) {
-        item.addEventListener("mouseenter", function () {
-          // Enhance text visibility on hover
-          if (heading) heading.style.color = "#ffffff";
-          if (paragraph) paragraph.style.color = "#ffffff";
-
-          // Add text shadow for better readability
-          if (heading)
-            heading.style.textShadow = "0 2px 4px rgba(0, 0, 0, 0.5)";
-          if (paragraph)
-            paragraph.style.textShadow = "0 2px 4px rgba(0, 0, 0, 0.5)";
-
-          // Show overlay with animation
-          overlay.style.transform = "translateY(0)";
-        });
-
-        item.addEventListener("mouseleave", function () {
-          // Hide overlay with animation
-          overlay.style.transform = "translateY(100%)";
-        });
-      }
-    });
-  }
-
-  // Initialize gallery enhancements
-  enhanceGalleryForMobile();
-  enhanceGalleryHoverEffects();
-
-  // Handle window resize events
-  window.addEventListener("resize", function () {
-    enhanceGalleryForMobile();
-  });
-
-  // Handle orientation change for mobile devices
-  window.addEventListener("orientationchange", function () {
-    // Small delay to allow the browser to complete the orientation change
-    setTimeout(() => {
-      enhanceGalleryForMobile();
-    }, 300);
-  });
-
-  // Optimize scrolling performance
-  let scrollTimeout;
-  window.addEventListener(
-    "scroll",
-    function () {
-      // Add a class during scroll to reduce animations
-      document.body.classList.add("is-scrolling");
-
-      // Remove the class after scrolling stops (debounce)
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        document.body.classList.remove("is-scrolling");
-      }, 100);
-    },
-    { passive: true }
-  ); // Improve scroll performance
 });
