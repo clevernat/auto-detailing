@@ -1513,6 +1513,9 @@ p {
   .gallery-grid {
     gap: 1.2rem;
     justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .gallery-filter {
@@ -1540,6 +1543,8 @@ p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
+    display: flex;
+    justify-content: center;
   }
 
   .gallery-item.animate-in {
@@ -1551,6 +1556,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .gallery-item img {
