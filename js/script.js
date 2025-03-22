@@ -5,54 +5,133 @@ const passiveSupported = () => {
   let passive = false;
   try {
     const options = Object.defineProperty({}, "passive", {
-      get: function() { passive = true; return true; }
+      get: function () {
+        passive = true;
+        return true;
+      },
     });
     window.addEventListener("test", null, options);
     window.removeEventListener("test", null, options);
-  } catch(err) {}
+  } catch (err) {}
   return passive;
 };
 
 const passiveOption = passiveSupported() ? { passive: true } : false;
 
+// Validate booking form before submission
+function validateBookingForm(form) {
+  // Check if at least one service is selected
+  const services = form.querySelectorAll('input[name="services"]:checked');
+  if (services.length === 0) {
+    ModernUI.toast.error("Please select at least one service");
+    return false;
+  }
+
+  // Check required fields
+  const requiredFields = ["name", "email", "phone", "date", "time"];
+  let isValid = true;
+
+  requiredFields.forEach((field) => {
+    const input = form.querySelector(`[name="${field}"]`);
+    if (!input || !input.value.trim()) {
+      ModernUI.toast.error(`Please fill in the ${field} field`);
+      isValid = false;
+    }
+  });
+
+  if (!isValid) return false;
+
+  // Store booking details in localStorage for persistence
+  try {
+    const formData = new FormData(form);
+    const bookingData = {
+      services: Array.from(formData.getAll("services")).map((service) => {
+        switch (service) {
+          case "interior":
+            return "Interior Detailing";
+          case "exterior":
+            return "Exterior Detailing";
+          case "full":
+            return "Full Detail Package";
+          case "mobile":
+            return "Mobile Service";
+          default:
+            return service;
+        }
+      }),
+      date: new Date(formData.get("date")).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+      time: (() => {
+        const time = formData.get("time");
+        switch (time) {
+          case "morning":
+            return "Morning (8am-12pm)";
+          case "afternoon":
+            return "Afternoon (12pm-4pm)";
+          case "evening":
+            return "Evening (4pm-6pm)";
+          default:
+            return time;
+        }
+      })(),
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      notes: formData.get("notes") || "",
+    };
+
+    localStorage.setItem("bookingDetails", JSON.stringify(bookingData));
+  } catch (e) {
+    console.error("Error storing booking details in localStorage", e);
+  }
+
+  return true;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize state management
   const appState = {
-    currentSection: 'home',
+    currentSection: "home",
     isMenuOpen: false,
     isBookingModalOpen: false,
     formData: {},
-    galleryFilter: 'all',
-    isLoading: false
+    galleryFilter: "all",
+    isLoading: false,
   };
-  
+
   // Set up state observers
-  ModernFramework.state.subscribe('currentSection', (value) => {
+  ModernFramework.state.subscribe("currentSection", (value) => {
     updateActiveNavLink(value);
   });
-  
-  ModernFramework.state.subscribe('isMenuOpen', (value) => {
+
+  ModernFramework.state.subscribe("isMenuOpen", (value) => {
     toggleMobileMenu(value);
   });
-  
-  ModernFramework.state.subscribe('isBookingModalOpen', (value) => {
+
+  ModernFramework.state.subscribe("isBookingModalOpen", (value) => {
     toggleBookingModal(value);
   });
-  
-  ModernFramework.state.subscribe('galleryFilter', (value) => {
+
+  ModernFramework.state.subscribe("galleryFilter", (value) => {
     filterGallery(value);
   });
-  
+
   // Mobile menu toggle with state management
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const mobileMenu = document.querySelector(".mobile-menu");
 
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener("click", function () {
-      ModernFramework.state.setState('isMenuOpen', !ModernFramework.state.getState('isMenuOpen'));
+      ModernFramework.state.setState(
+        "isMenuOpen",
+        !ModernFramework.state.getState("isMenuOpen")
+      );
     });
   }
-  
+
   function toggleMobileMenu(isOpen) {
     if (mobileMenuBtn && mobileMenu) {
       if (isOpen) {
@@ -71,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
   mobileMenuLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      ModernFramework.state.setState('isMenuOpen', false);
+      ModernFramework.state.setState("isMenuOpen", false);
     });
   });
 
@@ -121,22 +200,23 @@ document.addEventListener("DOMContentLoaded", function () {
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
 
   // Initialize lazy loading for images using our framework
-  ModernFramework.lazyLoad.images('.lazy-image', {
-    rootMargin: '200px 0px',
+  ModernFramework.lazyLoad.images(".lazy-image", {
+    rootMargin: "200px 0px",
     threshold: 0.01,
-    placeholder: true
+    placeholder: true,
   });
 
   // Gallery filter functionality with state management
   const filterButtons = document.querySelectorAll(".gallery-filter-btn");
   const galleryItems = document.querySelectorAll(".gallery-item");
-  
+
   // Filter gallery based on state
   function filterGallery(filterValue) {
     // Use requestAnimationFrame for smoother animations
@@ -157,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }, 300);
         }
       });
-      
+
       // Update active filter button
       filterButtons.forEach((btn) => {
         if (btn.getAttribute("data-filter") === filterValue) {
@@ -170,9 +250,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   filterButtons.forEach((button) => {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
       const filterValue = this.getAttribute("data-filter");
-      ModernFramework.state.setState('galleryFilter', filterValue);
+      ModernFramework.state.setState("galleryFilter", filterValue);
     });
   });
 
@@ -183,19 +263,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Throttle function to limit scroll event execution
     function throttle(func, limit) {
       let inThrottle;
-      return function() {
+      return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
           func.apply(context, args);
           inThrottle = true;
-          setTimeout(() => inThrottle = false, limit);
+          setTimeout(() => (inThrottle = false), limit);
         }
       };
     }
 
     // Throttled scroll handler
-    const handleScroll = throttle(function() {
+    const handleScroll = throttle(function () {
       if (window.pageYOffset > 300) {
         backToTopButton.classList.add("visible");
       } else {
@@ -205,87 +285,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", handleScroll, passiveOption);
 
-    backToTopButton.addEventListener("click", function() {
+    backToTopButton.addEventListener("click", function () {
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     });
   }
 
   // Booking modal functionality with state management
-  const bookingButtons = document.querySelectorAll(".cta-button:not(form .cta-button)");
+  const bookingButtons = document.querySelectorAll(
+    ".cta-button:not(form .cta-button)"
+  );
   const bookingModal = document.querySelector(".booking-modal-overlay");
   const bookingModalClose = document.querySelector(".booking-modal-close");
 
   if (bookingButtons.length > 0 && bookingModal && bookingModalClose) {
     bookingButtons.forEach((button) => {
-      button.addEventListener("click", function(e) {
+      button.addEventListener("click", function (e) {
         e.preventDefault();
-        ModernFramework.state.setState('isBookingModalOpen', true);
+        ModernFramework.state.setState("isBookingModalOpen", true);
       });
     });
 
-    bookingModalClose.addEventListener("click", function() {
-      ModernFramework.state.setState('isBookingModalOpen', false);
+    bookingModalClose.addEventListener("click", function () {
+      ModernFramework.state.setState("isBookingModalOpen", false);
     });
 
-    bookingModal.addEventListener("click", function(e) {
+    bookingModal.addEventListener("click", function (e) {
       if (e.target === bookingModal) {
-        ModernFramework.state.setState('isBookingModalOpen', false);
+        ModernFramework.state.setState("isBookingModalOpen", false);
       }
     });
-    
+
     // Handle booking form submission
-    const bookingForm = document.getElementById('bookingForm');
+    const bookingForm = document.getElementById("bookingForm");
     if (bookingForm) {
-      bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Show loading state
-        ModernFramework.state.setState('isLoading', true);
-        
-        // Get form data
-        const formData = new FormData(bookingForm);
-        const bookingData = {};
-        
-        for (let [key, value] of formData.entries()) {
-          bookingData[key] = value;
-        }
-        
-        // Store in state
-        ModernFramework.state.setState('formData', bookingData);
-        
-        // Simulate API call
-        setTimeout(() => {
-          // Hide loading state
-          ModernFramework.state.setState('isLoading', false);
-          
-          // Close modal
-          ModernFramework.state.setState('isBookingModalOpen', false);
-          
-          // Show success message
-          ModernUI.toast.success('Booking submitted successfully! We will contact you shortly.');
-          
-          // Reset form
-          bookingForm.reset();
-        }, 1500);
+      bookingForm.addEventListener("submit", function (e) {
+        // Form validation is now handled by the validateBookingForm function
+        // which is called via the onsubmit attribute in the HTML
       });
     }
   }
-  
+
   function toggleBookingModal(isOpen) {
     if (bookingModal) {
       if (isOpen) {
         bookingModal.classList.add("active");
         document.body.style.overflow = "hidden";
-        
+
         setTimeout(() => {
           document.querySelector(".booking-modal").classList.add("active");
         }, 10);
       } else {
         document.querySelector(".booking-modal").classList.remove("active");
-        
+
         setTimeout(() => {
           bookingModal.classList.remove("active");
           document.body.style.overflow = "";
@@ -295,113 +349,124 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Contact form submission with validation and toast notifications
-  const contactForm = document.getElementById('contactForm');
+  const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     // Initialize form validation
-    const formValidator = ModernFramework.forms.initValidation('contactForm', {
-      onSubmit: function(data, form) {
+    const formValidator = ModernFramework.forms.initValidation("contactForm", {
+      onSubmit: function (data, form) {
         // Show loading state
-        ModernFramework.state.setState('isLoading', true);
-        
+        ModernFramework.state.setState("isLoading", true);
+
         // Simulate form submission
         setTimeout(() => {
           // Hide loading state
-          ModernFramework.state.setState('isLoading', false);
-          
+          ModernFramework.state.setState("isLoading", false);
+
           // Show success message
-          ModernUI.toast.success('Message sent successfully! We will get back to you soon.');
-          
+          ModernUI.toast.success(
+            "Message sent successfully! We will get back to you soon."
+          );
+
           // Reset form
           form.reset();
         }, 1500);
-      }
+      },
     });
   }
-  
+
   // Update active navigation link based on scroll position
   function updateActiveNavLink(sectionId) {
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href').substring(1);
-      
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href").substring(1);
+
       if (href === sectionId) {
-        link.classList.add('active');
+        link.classList.add("active");
       } else {
-        link.classList.remove('active');
+        link.classList.remove("active");
       }
     });
   }
-  
+
   // Track current section on scroll
-  const sections = document.querySelectorAll('section[id]');
-  
-  window.addEventListener('scroll', throttle(function() {
-    let currentSection = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-      
-      if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-        currentSection = sectionId;
+  const sections = document.querySelectorAll("section[id]");
+
+  window.addEventListener(
+    "scroll",
+    throttle(function () {
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (
+          window.pageYOffset >= sectionTop &&
+          window.pageYOffset < sectionTop + sectionHeight
+        ) {
+          currentSection = sectionId;
+        }
+      });
+
+      if (currentSection !== ModernFramework.state.getState("currentSection")) {
+        ModernFramework.state.setState("currentSection", currentSection);
       }
-    });
-    
-    if (currentSection !== ModernFramework.state.getState('currentSection')) {
-      ModernFramework.state.setState('currentSection', currentSection);
-    }
-  }, 100), passiveOption);
-  
+    }, 100),
+    passiveOption
+  );
+
   // Initialize particles animation for hero section
   initParticles();
-  
+
   // Initialize smooth scrolling for navigation links
-  ModernUI.smoothScroll.init('.nav-link, .mobile-menu a', {
+  ModernUI.smoothScroll.init(".nav-link, .mobile-menu a", {
     duration: 800,
     offset: 80,
-    easing: 'easeInOutCubic'
+    easing: "easeInOutCubic",
   });
-  
+
   // Initialize sticky header
-  ModernUI.stickyHeader.init('.sticky-header', {
+  ModernUI.stickyHeader.init(".sticky-header", {
     offset: 100,
-    scrollUpOnly: true
+    scrollUpOnly: true,
   });
-  
+
   // Initialize carousel for testimonials
-  ModernUI.carousel.init('.testimonials-carousel', {
+  ModernUI.carousel.init(".testimonials-carousel", {
     autoplay: true,
     interval: 5000,
-    effect: 'fade'
+    effect: "fade",
   });
-  
+
   // Add hardware acceleration class to elements that need it
-  const animatedElements = document.querySelectorAll('.gallery-item, .service-card, .pricing-card, .testimonial-card');
-  animatedElements.forEach(el => {
-    el.classList.add('hardware-accelerated');
+  const animatedElements = document.querySelectorAll(
+    ".gallery-item, .service-card, .pricing-card, .testimonial-card"
+  );
+  animatedElements.forEach((el) => {
+    el.classList.add("hardware-accelerated");
   });
 });
 
 // Initialize particles animation
 function initParticles() {
-  const particles = document.querySelectorAll('.particle');
-  
+  const particles = document.querySelectorAll(".particle");
+
   particles.forEach((particle, index) => {
     // Set random position
     const x = Math.random() * 100;
     const y = Math.random() * 100;
-    
+
     // Set random size
     const size = Math.random() * 30 + 10;
-    
+
     // Set random animation duration
     const duration = Math.random() * 20 + 10;
-    
+
     // Set random animation delay
     const delay = Math.random() * 5;
-    
+
     // Apply styles
     particle.style.left = `${x}%`;
     particle.style.top = `${y}%`;
