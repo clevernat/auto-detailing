@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize EmailJS with user ID from environment variables
-  const EMAILJS_USER_ID = window.getEnvVar('EMAILJS_USER_ID');
+  const EMAILJS_USER_ID = window.emailJsConfig.EMAILJS_USER_ID;
   emailjs.init(EMAILJS_USER_ID);
   console.log("EmailJS initialized");
 
@@ -44,7 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Send the email using EmailJS
       emailjs
-        .send("service_imyvrbw", "template_quiv36v", templateParams)
+        .send(
+          window.emailJsConfig.EMAILJS_SERVICE_ID,
+          window.emailJsConfig.EMAILJS_CONTACT_TEMPLATE_ID,
+          templateParams
+        )
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
 
@@ -135,7 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Send the email using EmailJS
       emailjs
-        .send("service_imyvrbw", "template_mys1ws6", templateParams)
+        .send(
+          window.emailJsConfig.EMAILJS_SERVICE_ID,
+          window.emailJsConfig.EMAILJS_BOOKING_TEMPLATE_ID,
+          templateParams
+        )
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
 
@@ -227,7 +235,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Send the email using EmailJS
       emailjs
-        .send("service_imyvrbw", "template_newsletter", templateParams)
+        .send(
+          window.emailJsConfig.EMAILJS_SERVICE_ID,
+          window.emailJsConfig.EMAILJS_NEWSLETTER_TEMPLATE_ID,
+          templateParams
+        )
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
 

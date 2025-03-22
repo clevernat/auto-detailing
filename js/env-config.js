@@ -1,18 +1,19 @@
 // Environment Configuration
 (function() {
-    // Default fallback values (replace these with your actual default values)
-    const defaultConfig = {
-        EMAILJS_USER_ID: 'default_user_id',
-        EMAILJS_SERVICE_ID: 'default_service_id',
-        EMAILJS_CONTACT_TEMPLATE_ID: 'default_contact_template',
-        EMAILJS_BOOKING_TEMPLATE_ID: 'default_booking_template',
-        EMAILJS_NEWSLETTER_TEMPLATE_ID: 'default_newsletter_template'
+    // Hardcoded EmailJS configuration
+    const emailJsConfig = {
+        EMAILJS_USER_ID: 'XSoxMzmKmY1-e8_8q',
+        EMAILJS_SERVICE_ID: 'service_imyvrbw',
+        EMAILJS_CONTACT_TEMPLATE_ID: 'template_quiv36v',
+        EMAILJS_BOOKING_TEMPLATE_ID: 'template_mys1ws6',
+        EMAILJS_NEWSLETTER_TEMPLATE_ID: 'template_newsletter'
     };
 
     // Function to get environment variable (for client-side use)
     window.getEnvVar = function(key) {
-        // In a real-world scenario, you'd use a more secure method
-        // This is a simple placeholder
-        return defaultConfig[key] || '';
+        return emailJsConfig[key] || '';
     };
+
+    // Expose configuration for direct use if needed
+    window.emailJsConfig = emailJsConfig;
 })();
