@@ -2174,7 +2174,7 @@ body.is-scrolling .gallery-overlay {
   gap: 1.5rem;
 }
 
-.contact-form .cta-button {
+.contact-form .submit-button {
   width: 100%;
   padding: 1.2rem;
   border-radius: 10px;
@@ -2182,6 +2182,69 @@ body.is-scrolling .gallery-overlay {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .submit-button:hover {
+  background-color: #a00d24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsive adjustments for contact section */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .contact-info {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    width: 95%;
+  }
+
+  .contact-item {
+    padding: 1.2rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-item i {
+    font-size: 1.1rem;
+  }
 }
 
 /* Footer */

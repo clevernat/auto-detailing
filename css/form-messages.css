@@ -1,0 +1,77 @@
+/* Form message styling for EmailJS integration */
+
+.form-message {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-message.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border-left: 4px solid #4CAF50;
+}
+
+.form-message.error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+    border-left: 4px solid #F44336;
+}
+
+.form-message.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Spinner animation for loading state */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Disable form during submission */
+form:has(button:disabled) input,
+form:has(button:disabled) textarea,
+form:has(button:disabled) select {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-message {
+        padding: 12px;
+        margin: 15px 0;
+    }
+}

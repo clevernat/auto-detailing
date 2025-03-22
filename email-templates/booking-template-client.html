@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Auto Detailing Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #1a2b49;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        .content {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .booking-summary {
+            background-color: #ffffff;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .booking-summary h2 {
+            margin-top: 0;
+            color: #1a2b49;
+        }
+        .booking-details {
+            margin: 20px 0;
+        }
+        .booking-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .booking-details th, .booking-details td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+        .booking-details th {
+            width: 40%;
+            background-color: #f2f2f2;
+        }
+        .calendar-button {
+            display: inline-block;
+            background-color: #4285F4;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .what-to-expect {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .what-to-expect h3 {
+            margin-top: 0;
+            color: #1a2b49;
+        }
+        .what-to-expect ol {
+            padding-left: 20px;
+        }
+        .contact-info {
+            background-color: #e8f4fd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+        }
+        .social-links {
+            margin: 15px 0;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #1a2b49;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Booking Request Received</h1>
+        </div>
+        <div class="content">
+            <div class="booking-summary">
+                <h2>Thank You for Your Booking!</h2>
+                <p>Dear {{name}},</p>
+                <p>We have received your booking request for auto detailing services. Our team will review your request and contact you shortly to confirm your appointment.</p>
+            </div>
+            
+            <div class="booking-details">
+                <h3>Booking Summary</h3>
+                <table>
+                    <tr>
+                        <th>Requested Date:</th>
+                        <td>{{date}}</td>
+                    </tr>
+                    <tr>
+                        <th>Requested Time:</th>
+                        <td>{{time}}</td>
+                    </tr>
+                    <tr>
+                        <th>Services:</th>
+                        <td>{{services}}</td>
+                    </tr>
+                    <tr>
+                        <th>Your Name:</th>
+                        <td>{{name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Your Email:</th>
+                        <td>{{email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Your Phone:</th>
+                        <td>{{phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>Additional Notes:</th>
+                        <td>{{notes}}</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <center>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Auto+Detailing+Appointment&dates={{date}}T{{time}}/{{date}}T{{time}}&details=Services:+{{services}}" class="calendar-button">Add to Your Calendar</a>
+            </center>
+            
+            <div class="what-to-expect">
+                <h3>What Happens Next?</h3>
+                <ol>
+                    <li>Our team will review your booking request</li>
+                    <li>We'll contact you within 24 hours to confirm your appointment or suggest alternative times if needed</li>
+                    <li>Once confirmed, you'll receive a reminder 24 hours before your scheduled service</li>
+                    <li>On the day of service, our technician will arrive at the scheduled time</li>
+                </ol>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Need to Make Changes?</h3>
+                <p>If you need to modify or cancel your booking, please contact us at:</p>
+                <p><strong>Phone:</strong> (303) 555-1234<br>
+                <strong>Email:</strong> bookings@rjautodetailing.com</p>
+            </div>
+            
+            <p>We look forward to providing you with exceptional auto detailing services!</p>
+            <p>Best regards,<br>
+            The RJ Auto Detailing Team</p>
+        </div>
+        <div class="footer">
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </div>
+            <p>1234 Detail Drive, Denver, CO 80202<br>
+            (303) 555-1234 | info@rjautodetailing.com</p>
+            <p>&copy; 2025 RJ Auto Detailing. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

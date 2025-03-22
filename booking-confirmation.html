@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - RJ Auto Detailing</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .confirmation-container {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .confirmation-icon {
+            font-size: 5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            animation: pulse 2s ease infinite;
+        }
+        
+        .confirmation-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .confirmation-message {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .confirmation-steps {
+            background-color: rgba(var(--primary-rgb), 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        .confirmation-steps h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .confirmation-steps ol {
+            padding-left: 1.5rem;
+        }
+        
+        .confirmation-steps li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .return-home {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .return-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">RJ Auto Detailing</div>
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu - Hidden by default, shown when toggled -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Booking Confirmation Content -->
+    <div class="confirmation-container">
+        <div class="confirmation-icon">
+            <i class="fas fa-calendar-check"></i>
+        </div>
+        <h1 class="confirmation-title">Booking Received!</h1>
+        <p class="confirmation-message">
+            Thank you for booking your auto detailing service with us. We've received your request and will be in touch shortly to confirm your appointment.
+        </p>
+        
+        <div class="confirmation-steps">
+            <h3>What happens next?</h3>
+            <ol>
+                <li>You'll receive a confirmation email with your booking details.</li>
+                <li>Our team will review your request and check availability.</li>
+                <li>We'll contact you within 24 hours to confirm your appointment or suggest alternative times if needed.</li>
+                <li>Once confirmed, you'll receive a reminder 24 hours before your scheduled service.</li>
+            </ol>
+        </div>
+        
+        <a href="index.html" class="return-home">
+            <i class="fas fa-home"></i> Return to Homepage
+        </a>
+    </div>
+
+    <!-- Footer - Site information, links, and newsletter -->
+    <footer>
+        <!-- Decorative wave SVG at top of footer -->
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 RJ Auto Detailing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/libs/emailjs.js"></script>
+</body>
+</html>

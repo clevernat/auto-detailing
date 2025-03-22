@@ -159,12 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Booking modal functionality
-  const ctaButtons = document.querySelectorAll(".cta-button");
+  const bookingButtons = document.querySelectorAll(
+    ".cta-button:not(form .cta-button)"
+  );
   const bookingModal = document.querySelector(".booking-modal-overlay");
   const bookingModalClose = document.querySelector(".booking-modal-close");
 
-  if (ctaButtons.length > 0 && bookingModal && bookingModalClose) {
-    ctaButtons.forEach((button) => {
+  if (bookingButtons.length > 0 && bookingModal && bookingModalClose) {
+    bookingButtons.forEach((button) => {
       button.addEventListener("click", function (e) {
         e.preventDefault();
         bookingModal.classList.add("active");
@@ -197,38 +199,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Form submission handling
-  const contactForm = document.querySelector(".contact-form");
-  const bookingForm = document.getElementById("bookingForm");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Here you would typically send the form data to a server
-      // For demo purposes, we'll just show an alert
-      alert("Thank you for your message! We'll get back to you soon.");
-      contactForm.reset();
-    });
-  }
-
-  if (bookingForm) {
-    bookingForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Here you would typically send the booking data to a server
-      // For demo purposes, we'll just show an alert
-      alert(
-        "Thank you for your booking! We'll confirm your appointment shortly."
-      );
-      bookingForm.reset();
-
-      // Close the modal
-      document.querySelector(".booking-modal").classList.remove("active");
-      setTimeout(() => {
-        document
-          .querySelector(".booking-modal-overlay")
-          .classList.remove("active");
-        document.body.style.overflow = "";
-      }, 300);
-    });
-  }
+  // Form submission handling is now managed by emailjs.js
+  // The code below is removed as it's been replaced by EmailJS integration
 });
