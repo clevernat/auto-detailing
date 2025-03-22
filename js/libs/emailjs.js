@@ -5,7 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize EmailJS with user ID from environment variables
   const EMAILJS_USER_ID = window.emailJsConfig.EMAILJS_USER_ID;
   emailjs.init(EMAILJS_USER_ID);
-  console.log("EmailJS initialized");
+  
+  // Make sure EmailJS is properly initialized
+  if (typeof emailjs !== 'undefined' && emailjs.init) {
+    console.log("EmailJS initialized");
+  } else {
+    console.error("EmailJS not available. Forms may not work correctly.");
+  }
 
   // Contact form submission
   const contactForm = document.getElementById("contactForm");
@@ -42,42 +48,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log("Sending email with params:", templateParams);
 
-      // Send the email using EmailJS
-      emailjs
-        .send(
-          window.emailJsConfig.EMAILJS_SERVICE_ID,
-          window.emailJsConfig.EMAILJS_CONTACT_TEMPLATE_ID,
-          templateParams
-        )
-        .then(function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+      try {
+        // Send the email using EmailJS
+        emailjs
+          .send(
+            window.emailJsConfig.EMAILJS_SERVICE_ID,
+            window.emailJsConfig.EMAILJS_CONTACT_TEMPLATE_ID,
+            templateParams
+          )
+          .then(function (response) {
+            console.log("SUCCESS!", response.status, response.text);
 
-          // Show success message
-          showFormMessage(
-            contactForm,
-            "Thank you for your message! We'll get back to you soon.",
-            "success"
-          );
+            // Show success message
+            showFormMessage(
+              contactForm,
+              "Thank you for your message! We'll get back to you soon.",
+              "success"
+            );
 
-          // Reset form
-          contactForm.reset();
-        })
-        .catch(function (error) {
-          console.log("FAILED...", error);
+            // Reset form
+            contactForm.reset();
+          })
+          .catch(function (error) {
+            console.log("FAILED...", error);
 
-          // Show error message
-          showFormMessage(
-            contactForm,
-            "Sorry, there was a problem sending your message. Please try again later.",
-            "error"
-          );
-        })
-        .finally(function () {
-          // Restore button state
-          submitBtn.innerHTML = originalBtnText;
-          submitBtn.disabled = false;
-        });
+            // Show error message
+            showFormMessage(
+              contactForm,
+              "Sorry, there was a problem sending your message. Please try again later.",
+              "error"
+            );
+          })
+          .finally(function () {
+            // Restore button state
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
+      } catch (error) {
+        console.error("Error sending email:", error);
+        showFormMessage(
+          contactForm,
+          "Sorry, there was a problem with the email service. Please try again later.",
+          "error"
+        );
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      }
     });
+  } else {
+    console.error("Contact form not found");
   }
 
   // Booking form submission
@@ -137,43 +156,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log("Sending booking email with params:", templateParams);
 
-      // Send the email using EmailJS
-      emailjs
-        .send(
-          window.emailJsConfig.EMAILJS_SERVICE_ID,
-          window.emailJsConfig.EMAILJS_BOOKING_TEMPLATE_ID,
-          templateParams
-        )
-        .then(function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+      try {
+        // Send the email using EmailJS
+        emailjs
+          .send(
+            window.emailJsConfig.EMAILJS_SERVICE_ID,
+            window.emailJsConfig.EMAILJS_BOOKING_TEMPLATE_ID,
+            templateParams
+          )
+          .then(function (response) {
+            console.log("SUCCESS!", response.status, response.text);
 
-          // Show success message and reset form
-          bookingForm.reset();
+            // Show success message and reset form
+            bookingForm.reset();
 
-          // Close the modal and redirect to confirmation page
-          document.querySelector(".booking-modal").classList.remove("active");
-          setTimeout(() => {
-            document
-              .querySelector(".booking-modal-overlay")
-              .classList.remove("active");
-            document.body.style.overflow = "";
-            window.location.href = bookingForm.getAttribute("action");
-          }, 500);
-        })
-        .catch(function (error) {
-          console.log("FAILED...", error);
+            // Close the modal and redirect to confirmation page
+            document.querySelector(".booking-modal").classList.remove("active");
+            setTimeout(() => {
+              document
+                .querySelector(".booking-modal-overlay")
+                .classList.remove("active");
+              document.body.style.overflow = "";
+              window.location.href = bookingForm.getAttribute("action");
+            }, 500);
+          })
+          .catch(function (error) {
+            console.log("FAILED...", error);
 
-          // Show error message
-          alert(
-            "Sorry, there was a problem processing your booking. Please try again later."
-          );
-        })
-        .finally(function () {
-          // Restore button state
-          submitBtn.innerHTML = originalBtnText;
-          submitBtn.disabled = false;
-        });
+            // Show error message
+            alert(
+              "Sorry, there was a problem processing your booking. Please try again later."
+            );
+          })
+          .finally(function () {
+            // Restore button state
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
+      } catch (error) {
+        console.error("Error sending booking email:", error);
+        alert(
+          "Sorry, there was a problem with the email service. Please try again later."
+        );
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      }
     });
+  } else {
+    console.error("Booking form not found");
   }
 
   // Helper function to show form messages
@@ -233,48 +263,59 @@ document.addEventListener("DOMContentLoaded", function () {
         templateParams
       );
 
-      // Send the email using EmailJS
-      emailjs
-        .send(
-          window.emailJsConfig.EMAILJS_SERVICE_ID,
-          window.emailJsConfig.EMAILJS_NEWSLETTER_TEMPLATE_ID,
-          templateParams
-        )
-        .then(function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+      try {
+        // Send the email using EmailJS
+        emailjs
+          .send(
+            window.emailJsConfig.EMAILJS_SERVICE_ID,
+            window.emailJsConfig.EMAILJS_NEWSLETTER_TEMPLATE_ID,
+            templateParams
+          )
+          .then(function (response) {
+            console.log("SUCCESS!", response.status, response.text);
 
-          // Reset form
-          newsletterForm.reset();
+            // Reset form
+            newsletterForm.reset();
 
-          // Show success message
-          const newsletterContainer =
-            newsletterForm.closest(".footer-newsletter");
-          if (newsletterContainer) {
-            const message = document.createElement("div");
-            message.className = "form-message success";
-            message.innerHTML = "Thank you for subscribing to our newsletter!";
-            newsletterContainer.appendChild(message);
+            // Show success message
+            const newsletterContainer =
+              newsletterForm.closest(".footer-newsletter");
+            if (newsletterContainer) {
+              const message = document.createElement("div");
+              message.className = "form-message success";
+              message.innerHTML = "Thank you for subscribing to our newsletter!";
+              newsletterContainer.appendChild(message);
 
-            // Remove message after 5 seconds
-            setTimeout(() => {
-              message.classList.add("fade-out");
+              // Remove message after 5 seconds
               setTimeout(() => {
-                message.remove();
-              }, 500);
-            }, 5000);
-          }
-        })
-        .catch(function (error) {
-          console.log("FAILED...", error);
-          alert(
-            "Sorry, there was a problem with your subscription. Please try again later."
-          );
-        })
-        .finally(function () {
-          // Restore button state
-          submitBtn.innerHTML = originalBtnHTML;
-          submitBtn.disabled = false;
-        });
+                message.classList.add("fade-out");
+                setTimeout(() => {
+                  message.remove();
+                }, 500);
+              }, 5000);
+            }
+          })
+          .catch(function (error) {
+            console.log("FAILED...", error);
+            alert(
+              "Sorry, there was a problem with your subscription. Please try again later."
+            );
+          })
+          .finally(function () {
+            // Restore button state
+            submitBtn.innerHTML = originalBtnHTML;
+            submitBtn.disabled = false;
+          });
+      } catch (error) {
+        console.error("Error sending newsletter subscription:", error);
+        alert(
+          "Sorry, there was a problem with the email service. Please try again later."
+        );
+        submitBtn.innerHTML = originalBtnHTML;
+        submitBtn.disabled = false;
+      }
     });
+  } else {
+    console.error("Newsletter form not found");
   }
 });

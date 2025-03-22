@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     bookingButtons.forEach((button) => {
       button.addEventListener("click", function (e) {
         e.preventDefault();
+        console.log("Booking button clicked");
         bookingModal.classList.add("active");
         document.body.style.overflow = "hidden";
 
@@ -197,6 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
       }
     });
+  } else {
+    console.error("Booking modal elements not found");
   }
 
   // Form submission handling is now managed by emailjs.js

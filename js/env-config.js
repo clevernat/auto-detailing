@@ -2,7 +2,7 @@
 (function() {
     // Hardcoded EmailJS configuration
     const emailJsConfig = {
-        EMAILJS_USER_ID: 'XSoxMzmKmY1-e8_8q',
+        EMAILJS_USER_ID: 'XSoxMzmKmY1-e8_8q', // Make sure this is your correct public key
         EMAILJS_SERVICE_ID: 'service_imyvrbw',
         EMAILJS_CONTACT_TEMPLATE_ID: 'template_quiv36v',
         EMAILJS_BOOKING_TEMPLATE_ID: 'template_mys1ws6',
