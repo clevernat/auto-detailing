@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+Disallow: /env-config.js
+
+Sitemap: https://www.rjautodetailing.com/sitemap.xml
