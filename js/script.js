@@ -157,7 +157,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Typewriter effect for hero section - optimized
   const typewriterText = document.getElementById("typewriter-text");
   if (typewriterText) {
-    const words = ["Vehicle", "Experience", "Investment"];
+    const words = [
+      "For Your Vehicle",
+      "For Your Experience",
+      "For Your Investment",
+    ];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
