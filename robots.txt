@@ -1,26 +1,27 @@
 User-agent: *
 Allow: /
-Disallow: /js/env-config.js
-Disallow: /email-templates/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
 
-# Allow CSS for rendering
-Allow: /css/
-
-# Google-specific crawlers
+# Allow all search engines to access important content
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Allow: /sitemap.xml
+Allow: /images/
+Allow: /css/
+Allow: /js/
 
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Mobile
-Allow: /
-
-# Bing-specific crawlers
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+Allow: /sitemap.xml
+Allow: /images/
+Allow: /css/
+Allow: /js/
 
 # Sitemap location
 Sitemap: https://www.rjautodetailing.com/sitemap.xml
+
+# Crawl delay for bots to prevent server overload
+Crawl-delay: 1
