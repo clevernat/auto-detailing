@@ -1,7 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /js/
-Disallow: /css/
-Disallow: /env-config.js
+Disallow: /js/env-config.js
+Disallow: /email-templates/
 
+# Allow CSS for rendering
+Allow: /css/
+
+# Google-specific crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing-specific crawlers
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://www.rjautodetailing.com/sitemap.xml
