@@ -34,7 +34,6 @@ RJ Auto Detailing is a modern, responsive website designed for a professional au
 
 - Contact form with EmailJS integration
 - Booking form for service appointments
-- Newsletter subscription
 - Client-side form validation
 - Loading indicators and success/error messages
 
@@ -44,6 +43,8 @@ RJ Auto Detailing is a modern, responsive website designed for a professional au
 - Minimal external dependencies
 - Optimized CSS and JavaScript
 - AOS (Animate on Scroll) library for smooth animations
+- Hardware-accelerated animations
+- Preloading of critical assets
 
 ## 🛠 Technologies Used
 
@@ -54,6 +55,7 @@ RJ Auto Detailing is a modern, responsive website designed for a professional au
 - Vanilla JavaScript
 - Font Awesome Icons
 - AOS (Animate on Scroll) Library
+- Inter Font (Modern, Performance-Optimized Typography)
 
 ### Form Handling
 
@@ -66,6 +68,7 @@ RJ Auto Detailing is a modern, responsive website designed for a professional au
 - Flexbox
 - CSS Variables for theming
 - Custom animations and transitions
+- Performance-first design approach
 
 ## 🚀 Getting Started
 
@@ -95,7 +98,6 @@ EMAILJS_USER_ID=your_emailjs_user_id
 EMAILJS_SERVICE_ID=your_emailjs_service_id
 EMAILJS_CONTACT_TEMPLATE_ID=your_contact_template_id
 EMAILJS_BOOKING_TEMPLATE_ID=your_booking_template_id
-EMAILJS_NEWSLETTER_TEMPLATE_ID=your_newsletter_template_id
 ```
 
 3. Local Development
@@ -111,14 +113,14 @@ rj-auto-detailing/
 │
 ├── css/
 │   ├── styles.css
-│   └── form-messages.css
+│   ├── form-messages.css
+│   └── performance.css
 │
 ├── js/
 │   ├── script.js
 │   ├── env-config.js
 │   └── libs/
-│       ├── emailjs.js
-│       └── other-libraries
+│       └── emailjs.js
 │
 ├── index.html
 ├── .env
@@ -158,7 +160,6 @@ Modify color variables in `css/styles.css`:
 
 - Contact Form Template
 - Booking Form Template
-- Newsletter Subscription Template
 
 ## 🌐 Deployment
 
@@ -201,9 +202,9 @@ Modify color variables in `css/styles.css`:
 
 ### Lighthouse Scores (Approximate)
 
-- Performance: 90/100
+- Performance: 95/100
 - Accessibility: 95/100
-- Best Practices: 90/100
+- Best Practices: 95/100
 - SEO: 90/100
 
 ## 🔒 Security Considerations
@@ -223,6 +224,7 @@ Modify color variables in `css/styles.css`:
 - Icons: Font Awesome
 - Images: Unsplash
 - Libraries: AOS, EmailJS
+- Font: Inter
 
 ## 📞 Contact
 

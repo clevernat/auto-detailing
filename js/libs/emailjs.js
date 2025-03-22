@@ -4,10 +4,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize EmailJS with user ID from environment variables
   const EMAILJS_USER_ID = window.emailJsConfig.EMAILJS_USER_ID;
-  emailjs.init(EMAILJS_USER_ID);
   
   // Make sure EmailJS is properly initialized
   if (typeof emailjs !== 'undefined' && emailjs.init) {
+    emailjs.init(EMAILJS_USER_ID);
     console.log("EmailJS initialized");
   } else {
     console.error("EmailJS not available. Forms may not work correctly.");
@@ -229,93 +229,5 @@ document.addEventListener("DOMContentLoaded", function () {
         message.remove();
       }, 500);
     }, 5000);
-  }
-
-  // Add event listener for newsletter form if it exists
-  const newsletterForm = document.getElementById("newsletterForm");
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      console.log("Newsletter form submitted");
-
-      const emailInput = newsletterForm.querySelector("input[type='email']");
-      const submitBtn = newsletterForm.querySelector("button[type='submit']");
-
-      // Disable button and show loading state
-      const originalBtnHTML = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-      submitBtn.disabled = true;
-
-      // Prepare template parameters
-      const templateParams = {
-        email: emailInput.value,
-        submitted_at: new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      };
-
-      console.log(
-        "Sending newsletter subscription with params:",
-        templateParams
-      );
-
-      try {
-        // Send the email using EmailJS
-        emailjs
-          .send(
-            window.emailJsConfig.EMAILJS_SERVICE_ID,
-            window.emailJsConfig.EMAILJS_NEWSLETTER_TEMPLATE_ID,
-            templateParams
-          )
-          .then(function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-
-            // Reset form
-            newsletterForm.reset();
-
-            // Show success message
-            const newsletterContainer =
-              newsletterForm.closest(".footer-newsletter");
-            if (newsletterContainer) {
-              const message = document.createElement("div");
-              message.className = "form-message success";
-              message.innerHTML = "Thank you for subscribing to our newsletter!";
-              newsletterContainer.appendChild(message);
-
-              // Remove message after 5 seconds
-              setTimeout(() => {
-                message.classList.add("fade-out");
-                setTimeout(() => {
-                  message.remove();
-                }, 500);
-              }, 5000);
-            }
-          })
-          .catch(function (error) {
-            console.log("FAILED...", error);
-            alert(
-              "Sorry, there was a problem with your subscription. Please try again later."
-            );
-          })
-          .finally(function () {
-            // Restore button state
-            submitBtn.innerHTML = originalBtnHTML;
-            submitBtn.disabled = false;
-          });
-      } catch (error) {
-        console.error("Error sending newsletter subscription:", error);
-        alert(
-          "Sorry, there was a problem with the email service. Please try again later."
-        );
-        submitBtn.innerHTML = originalBtnHTML;
-        submitBtn.disabled = false;
-      }
-    });
-  } else {
-    console.error("Newsletter form not found");
   }
 });
