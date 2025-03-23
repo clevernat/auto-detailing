@@ -1,15 +1,121 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
     <title>New Contact Form Submission</title>
-</head>
-<body>
-    <h1>New Contact Form Submission</h1>
-    <p><strong>Name:</strong> {{name}}</p>
-    <p><strong>Email:</strong> {{email}}</p>
-    <p><strong>Phone:</strong> {{phone}}</p>
-    <p><strong>Service:</strong> {{service}}</p>
-    <p><strong>Message:</strong> {{message}}</p>
-    <p><strong>Submitted On:</strong> {{submitted_at}}</p>
-</body>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f2f5;
+        color: #333;
+      }
+      .container {
+        max-width: 700px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+        color: #ffffff;
+        padding: 25px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .content {
+        padding: 30px;
+      }
+      .field {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .label {
+        flex: 0 0 150px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-right: 20px;
+      }
+      .value {
+        flex: 1;
+        color: #34495e;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+      }
+      .footer {
+        background-color: #f1f3f5;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #e9ecef;
+      }
+      .footer p {
+        color: #6c757d;
+        font-size: 14px;
+        margin: 0;
+      }
+      @media (max-width: 600px) {
+        .field {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .label {
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>New Contact Form Submission</h1>
+      </div>
+      <div class="content">
+        <div class="field">
+          <span class="label">Name:</span>
+          <span class="value">{{name}}</span>
+        </div>
+        <div class="field">
+          <span class="label">Email:</span>
+          <span class="value">{{email}}</span>
+        </div>
+        <div class="field">
+          <span class="label">Phone:</span>
+          <span class="value">{{phone}}</span>
+        </div>
+        <div class="field">
+          <span class="label">Subject:</span>
+          <span class="value">{{subject}}</span>
+        </div>
+        <div class="field">
+          <span class="label">Message:</span>
+          <span class="value">{{message}}</span>
+        </div>
+        <div class="field">
+          <span class="label">Submitted On:</span>
+          <span class="value">{{submitted_at}}</span>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          Auto Detailing Services<br>
+          123 Detailing Street, Auto City<br>
+          Need help? Call us at (555) 123-4567
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
