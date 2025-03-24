@@ -21,7 +21,7 @@ Allow: /css/
 Allow: /js/
 
 # Sitemap location
-Sitemap: https://www.rjautodetailing.com/sitemap.xml
+Sitemap: https://ramobileaestheticdetailing.com/sitemap.xml
 
 # Crawl delay for bots to prevent server overload
 Crawl-delay: 1

@@ -7,141 +7,146 @@
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:local="http://www.google.com/schemas/sitemap-local/1.0">
   <url>
-    <loc>https://www.rjautodetailing.com/</loc>
+    <loc>https://ramobileaestheticdetailing.com/</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/logo.png</image:loc>
-      <image:title>RJ Auto Detailing - Denver's Premier Auto Detailing Service</image:title>
-      <image:caption>Professional auto detailing services in Denver, Colorado - Best car detailing near me</image:caption>
-      <image:geo_location>Denver, Colorado</image:geo_location>
+      <image:loc>https://ramobileaestheticdetailing.com/images/logo.png</image:loc>
+      <image:title>RA Mobile Aesthetic Detailing - Colorado's #1 Mobile Auto Detailing Service</image:title>
+      <image:caption>Professional mobile auto detailing services throughout Colorado - Premium car detailing that comes to you</image:caption>
+      <image:geo_location>Colorado</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/hero-banner.jpg</image:loc>
-      <image:title>Professional Car Detailing Services in Denver</image:title>
-      <image:caption>Expert auto detailing for luxury, sports, and everyday vehicles in Denver</image:caption>
-      <image:geo_location>Denver, Colorado</image:geo_location>
+      <image:loc>https://ramobileaestheticdetailing.com/images/hero-banner.jpg</image:loc>
+      <image:title>Professional Mobile Car Detailing Services Throughout Colorado</image:title>
+      <image:caption>Expert mobile auto detailing for luxury, sports, and everyday vehicles anywhere in Colorado</image:caption>
+      <image:geo_location>Colorado</image:geo_location>
     </image:image>
     <local:localBusiness>
-      <local:name>RJ Auto Detailing</local:name>
+      <local:name>RA Mobile Aesthetic Detailing</local:name>
       <local:address>1234 Detail Drive, Denver, CO 80202</local:address>
       <local:phone>+13035551234</local:phone>
-      <local:email>info@rjautodetailing.com</local:email>
-      <local:description>Denver's top-rated auto detailing service specializing in premium car care, paint correction, ceramic coating, and interior detailing. Serving Denver and surrounding areas.</local:description>
+      <local:email>info@ramobileaestheticdetailing.com</local:email>
+      <local:description>Colorado's #1 mobile auto detailing service offering professional interior, exterior, and full detail packages delivered directly to your location throughout Colorado. Specializing in aesthetic detailing with 100% satisfaction guaranteed.</local:description>
       <local:openingHours>Monday-Friday 08:00-18:00</local:openingHours>
       <local:openingHours>Saturday 09:00-16:00</local:openingHours>
-      <local:openingHours>Sunday 10:00-14:00</local:openingHours>
       <local:paymentAccepted>Cash, Credit Card, Debit Card, PayPal, Venmo</local:paymentAccepted>
-      <local:priceRange>$99-$499</local:priceRange>
+      <local:priceRange>$50-$120</local:priceRange>
       <local:geo>
-        <local:latitude>39.7392</local:latitude>
-        <local:longitude>-104.9903</local:longitude>
+        <local:latitude>39.5501</local:latitude>
+        <local:longitude>-105.7821</local:longitude>
       </local:geo>
-      <local:serviceArea>Denver, Aurora, Lakewood, Littleton, Englewood, Centennial, Highlands Ranch</local:serviceArea>
+      <local:serviceArea>Colorado, Denver, Colorado Springs, Aurora, Fort Collins, Boulder, Lakewood, Thornton, Arvada, Westminster, Pueblo, Centennial, Greeley, Longmont, Loveland, Grand Junction, Broomfield</local:serviceArea>
     </local:localBusiness>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/services</loc>
+    <loc>https://ramobileaestheticdetailing.com/services</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/services-main.jpg</image:loc>
-      <image:title>Complete Auto Detailing Services in Denver</image:title>
-      <image:caption>Full range of car detailing services including ceramic coating, paint correction, and interior detailing</image:caption>
+      <image:loc>https://ramobileaestheticdetailing.com/images/services-main.jpg</image:loc>
+      <image:title>Complete Mobile Auto Detailing Services Throughout Colorado</image:title>
+      <image:caption>Full range of mobile car detailing services including interior detailing, exterior detailing, and full detail packages</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/services/ceramic-coating</loc>
+    <loc>https://ramobileaestheticdetailing.com/services/interior-detailing</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/ceramic-coating.jpg</image:loc>
-      <image:title>Professional Ceramic Coating Services in Denver</image:title>
-      <image:caption>Long-lasting ceramic coating protection for your vehicle's paint</image:caption>
+      <image:loc>https://ramobileaestheticdetailing.com/images/interior-detailing.jpg</image:loc>
+      <image:title>Professional Interior Detailing Services Throughout Colorado</image:title>
+      <image:caption>Comprehensive interior cleaning with premium treatments for carpets, upholstery, dashboard, and leather</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/services/paint-correction</loc>
+    <loc>https://ramobileaestheticdetailing.com/services/exterior-detailing</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/paint-correction.jpg</image:loc>
-      <image:title>Expert Paint Correction in Denver</image:title>
-      <image:caption>Professional paint correction to remove swirls, scratches and restore your vehicle's finish</image:caption>
+      <image:loc>https://ramobileaestheticdetailing.com/images/exterior-detailing.jpg</image:loc>
+      <image:title>Expert Exterior Detailing Throughout Colorado</image:title>
+      <image:caption>Precision hand wash, clay bar treatment, and professional polishing with premium wax application</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/gallery</loc>
+    <loc>https://ramobileaestheticdetailing.com/gallery</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/gallery-showcase.jpg</image:loc>
-      <image:title>RJ Auto Detailing Portfolio - Before and After Results</image:title>
-      <image:caption>See our impressive before and after transformations on luxury and everyday vehicles</image:caption>
+      <image:loc>https://ramobileaestheticdetailing.com/images/gallery-showcase.jpg</image:loc>
+      <image:title>RA Mobile Aesthetic Detailing Portfolio - Before and After Results</image:title>
+      <image:caption>See our impressive before and after transformations on luxury and everyday vehicles throughout Colorado</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/pricing</loc>
+    <loc>https://ramobileaestheticdetailing.com/pricing</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/contact</loc>
+    <loc>https://ramobileaestheticdetailing.com/contact</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/testimonials</loc>
+    <loc>https://ramobileaestheticdetailing.com/testimonials</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/blog</loc>
+    <loc>https://ramobileaestheticdetailing.com/blog</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/blog/ceramic-coating-benefits</loc>
+    <loc>https://ramobileaestheticdetailing.com/blog/mobile-detailing-benefits</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/blog/paint-protection-guide</loc>
+    <loc>https://ramobileaestheticdetailing.com/blog/vehicle-protection-guide</loc>
     <lastmod>2024-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/blog/winter-car-care-tips</loc>
+    <loc>https://ramobileaestheticdetailing.com/blog/colorado-car-care-tips</loc>
     <lastmod>2024-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/faq</loc>
+    <loc>https://ramobileaestheticdetailing.com/locations</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ramobileaestheticdetailing.com/faq</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rjautodetailing.com/about-us</loc>
+    <loc>https://ramobileaestheticdetailing.com/about-us</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://www.rjautodetailing.com/images/about-team.jpg</image:loc>
-      <image:title>RJ Auto Detailing Team - Denver's Auto Detailing Experts</image:title>
-      <image:caption>Meet our team of certified auto detailing professionals in Denver</image:caption>
+      <image:loc>https://ramobileaestheticdetailing.com/images/about-team.jpg</image:loc>
+      <image:title>RA Mobile Aesthetic Detailing Team - Colorado's Mobile Auto Detailing Experts</image:title>
+      <image:caption>Meet our team of certified mobile auto detailing professionals serving all of Colorado</image:caption>
     </image:image>
   </url>
 </urlset>

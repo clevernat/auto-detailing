@@ -6,67 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Colorado's #1 Auto Detailing Service | Professional interior, exterior, and full detail packages with mobile service options. Premium car detailing with 100% satisfaction guarantee. Transform your vehicle today!"
+      content="Colorado's #1 Mobile Auto Detailing Service | RA Mobile Aesthetic Detailing brings professional interior, exterior, and full detail packages directly to your location anywhere in Colorado. Premium car detailing with 100% satisfaction guarantee. Transform your vehicle today!"
     />
     <meta
       name="keywords"
-      content="best auto detailing Colorado, car detailing Denver CO, mobile auto detailing, interior detailing near me, exterior detailing services, paint correction Colorado, ceramic coating Colorado, headlight restoration Denver, premium car wash, professional auto detailing"
+      content="mobile auto detailing Colorado, aesthetic car detailing Colorado, RA Mobile Aesthetic Detailing, mobile detailing service Colorado, premium auto detailing, interior detailing Colorado, exterior detailing services, paint correction Colorado, ceramic coating Colorado, headlight restoration Colorado, professional car detailing Colorado Springs, Fort Collins auto detailing, Boulder mobile detailing, Pueblo car detailing, Grand Junction auto detailing"
     />
-    <meta name="author" content="RJ Auto Detailing" />
-    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RA Mobile Aesthetic Detailing" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <title>
-      Colorado's Best Auto Detailing | RJ Auto Detailing | Premium Car Detailing
-      Services
+      Colorado's #1 Mobile Auto Detailing Service | RA Mobile Aesthetic
+      Detailing | Professional Car Care Throughout Colorado
     </title>
-    <link rel="canonical" href="https://www.rjautodetailing.com/" />
+    <link rel="canonical" href="https://ramobileaestheticdetailing.com/" />
     <meta name="geo.region" content="US-CO" />
-    <meta name="geo.placename" content="Denver" />
-    <meta name="geo.position" content="39.7392;-104.9903" />
-    <meta name="ICBM" content="39.7392, -104.9903" />
+    <meta name="geo.placename" content="Colorado" />
+    <meta name="geo.position" content="39.5501;-105.7821" />
+    <meta name="ICBM" content="39.5501, -105.7821" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.rjautodetailing.com/" />
+    <meta property="og:url" content="https://ramobileaestheticdetailing.com/" />
     <meta
       property="og:title"
-      content="Colorado's Best Auto Detailing | RJ Auto Detailing | Premium Car Care"
+      content="Colorado's #1 Mobile Auto Detailing Service | RA Mobile Aesthetic Detailing"
     />
     <meta
       property="og:description"
-      content="Colorado's top-rated auto detailing service. Professional interior, exterior, and full detail packages with mobile service. 100% satisfaction guaranteed!"
+      content="Colorado's top-rated mobile auto detailing service. Professional interior, exterior, and full detail packages delivered directly to your location anywhere in Colorado. 100% satisfaction guaranteed!"
     />
     <meta
       property="og:image"
-      content="https://www.rjautodetailing.com/images/og-image.jpg"
+      content="https://ramobileaestheticdetailing.com/images/og-image.jpg"
     />
     <meta
       property="og:image:alt"
-      content="RJ Auto Detailing - Professional Car Detailing Services in Colorado"
+      content="RA Mobile Aesthetic Detailing - Professional Car Detailing Services Throughout Colorado"
     />
-    <meta property="og:site_name" content="RJ Auto Detailing" />
+    <meta property="og:site_name" content="RA Mobile Aesthetic Detailing" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.rjautodetailing.com/" />
+    <meta
+      name="twitter:url"
+      content="https://ramobileaestheticdetailing.com/"
+    />
     <meta
       name="twitter:title"
-      content="Colorado's Best Auto Detailing | RJ Auto Detailing | Premium Car Care"
+      content="Colorado's #1 Mobile Auto Detailing Service | RA Mobile Aesthetic Detailing"
     />
     <meta
       name="twitter:description"
-      content="Colorado's top-rated auto detailing service. Professional interior, exterior, and full detail packages with mobile service. 100% satisfaction guaranteed!"
+      content="Colorado's top-rated mobile auto detailing service. Professional interior, exterior, and full detail packages delivered directly to your location anywhere in Colorado. 100% satisfaction guaranteed!"
     />
     <meta
       name="twitter:image"
-      content="https://www.rjautodetailing.com/images/twitter-image.jpg"
+      content="https://ramobileaestheticdetailing.com/images/twitter-image.jpg"
     />
     <meta
       name="twitter:image:alt"
-      content="RJ Auto Detailing - Professional Car Detailing Services in Colorado"
+      content="RA Mobile Aesthetic Detailing - Professional Car Detailing Services Throughout Colorado"
     />
-    <meta name="twitter:site" content="@rjautodetailing" />
-    <meta name="twitter:creator" content="@rjautodetailing" />
+    <meta name="twitter:site" content="@ramobileaestheticdetailing" />
+    <meta name="twitter:creator" content="@ramobileaestheticdetailing" />
 
     <!-- Preload critical assets -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -104,6 +107,48 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/testimonials.css" />
     <link rel="stylesheet" href="css/form-messages.css" />
+    
+    <!-- Additional custom styles -->
+    <style>
+      /* Services grid layout */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      
+      /* Service card styling */
+      .service-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 25px;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      
+      .service-icon {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+        margin-bottom: 15px;
+      }
+      
+      .service-card h3 {
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr; /* Single column on mobile */
+        }
+      }
+    </style>
 
     <!-- AOS Animation Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -113,13 +158,13 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "RJ Auto Detailing",
-        "image": "https://www.rjautodetailing.com/images/logo.png",
-        "url": "https://www.rjautodetailing.com",
+        "name": "RA Mobile Aesthetic Detailing",
+        "image": "https://ramobileaestheticdetailing.com/images/logo.png",
+        "url": "https://ramobileaestheticdetailing.com",
         "telephone": "+13035551234",
         "priceRange": "$50 - $120",
-        "description": "Denver's #1 auto detailing service offering professional interior, exterior, and full detail packages with mobile service options. 100% satisfaction guaranteed.",
-        "slogan": "Denver's Premier Auto Detailing Service",
+        "description": "Colorado's #1 mobile auto detailing service offering professional interior, exterior, and full detail packages delivered directly to your location throughout Colorado. Specializing in aesthetic detailing with 100% satisfaction guaranteed.",
+        "slogan": "Premium Mobile Detailing That Comes To You Anywhere in Colorado",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1234 Detail Drive",
@@ -130,8 +175,8 @@
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 39.7392,
-          "longitude": -104.9903
+          "latitude": 39.5501,
+          "longitude": -105.7821
         },
         "openingHoursSpecification": [
           {
@@ -154,11 +199,11 @@
           }
         ],
         "sameAs": [
-          "https://www.facebook.com/rjautodetailing",
-          "https://www.instagram.com/rjautodetailing",
-          "https://twitter.com/rjautodetailing",
-          "https://www.yelp.com/biz/rj-auto-detailing-denver",
-          "https://www.linkedin.com/company/rj-auto-detailing"
+          "https://www.facebook.com/ramobileaestheticdetailing",
+          "https://www.instagram.com/ramobileaestheticdetailing",
+          "https://twitter.com/ramobileaestheticdetailing",
+          "https://www.yelp.com/biz/ra-mobile-aesthetic-detailing-denver",
+          "https://www.linkedin.com/company/ra-mobile-aesthetic-detailing"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -228,7 +273,7 @@
               "ratingValue": "5"
             },
             "datePublished": "2023-05-15",
-            "reviewBody": "RJ Auto Detailing transformed my 5-year-old car into what looks like a brand new vehicle. The attention to detail was impressive, and the convenience of their mobile service made the experience even better. Highly recommend!"
+            "reviewBody": "RA Mobile Aesthetic Detailing transformed my 5-year-old car into what looks like a brand new vehicle. The attention to detail was impressive, and the convenience of their mobile service made the experience even better. Highly recommend!"
           },
           {
             "@type": "Review",
@@ -241,7 +286,7 @@
               "ratingValue": "5"
             },
             "datePublished": "2023-04-22",
-            "reviewBody": "I've tried several detailing services in the area, but RJ Auto Detailing stands out for their professionalism and quality of work. They removed stains from my seats that I thought were permanent. My car hasn't looked this good since I bought it!"
+            "reviewBody": "I've tried several detailing services in the area, but RA Mobile Aesthetic Detailing stands out for their professionalism and quality of work. They removed stains from my seats that I thought were permanent. My car hasn't looked this good since I bought it!"
           }
         ]
       }
@@ -256,15 +301,23 @@
         "name": "Professional Auto Detailing Services",
         "provider": {
           "@type": "LocalBusiness",
-          "name": "RJ Auto Detailing",
-          "image": "https://www.rjautodetailing.com/images/logo.png",
+          "name": "RA Mobile Aesthetic Detailing",
+          "image": "https://ramobileaestheticdetailing.com/images/logo.png",
           "telephone": "+13035551234",
           "priceRange": "$50 - $120"
         },
         "areaServed": [
           {
+            "@type": "State",
+            "name": "Colorado"
+          },
+          {
             "@type": "City",
             "name": "Denver"
+          },
+          {
+            "@type": "City",
+            "name": "Colorado Springs"
           },
           {
             "@type": "City",
@@ -272,15 +325,55 @@
           },
           {
             "@type": "City",
+            "name": "Fort Collins"
+          },
+          {
+            "@type": "City",
+            "name": "Boulder"
+          },
+          {
+            "@type": "City",
             "name": "Lakewood"
           },
           {
             "@type": "City",
-            "name": "Littleton"
+            "name": "Thornton"
           },
           {
             "@type": "City",
-            "name": "Englewood"
+            "name": "Arvada"
+          },
+          {
+            "@type": "City",
+            "name": "Westminster"
+          },
+          {
+            "@type": "City",
+            "name": "Pueblo"
+          },
+          {
+            "@type": "City",
+            "name": "Centennial"
+          },
+          {
+            "@type": "City",
+            "name": "Greeley"
+          },
+          {
+            "@type": "City",
+            "name": "Longmont"
+          },
+          {
+            "@type": "City",
+            "name": "Loveland"
+          },
+          {
+            "@type": "City",
+            "name": "Grand Junction"
+          },
+          {
+            "@type": "City",
+            "name": "Broomfield"
           }
         ],
         "offers": {
@@ -319,14 +412,13 @@
               "description": "Wash & Shine Package plus Hybrid Ceramic Wash & Wax, graphite spray for added exterior shine, door jambs & gas cap area cleaned with tornado gun"
             }
           ]
-          ]
         },
-        "description": "Denver's top-rated auto detailing service offering professional interior cleaning, exterior detailing, paint correction, ceramic coating, and mobile services throughout the Denver metro area. 100% satisfaction guaranteed.",
+        "description": "Colorado's top-rated mobile auto detailing service offering professional interior cleaning, exterior detailing, paint correction, ceramic coating, and premium aesthetic services throughout Colorado. Our mobile service brings the detailing studio to your location for maximum convenience. 100% satisfaction guaranteed.",
         "serviceOutput": "Professionally detailed, clean, and protected vehicles with enhanced appearance and longevity",
-        "termsOfService": "https://www.rjautodetailing.com/terms",
+        "termsOfService": "https://ramobileaestheticdetailing.com/terms",
         "brand": {
           "@type": "Brand",
-          "name": "RJ Auto Detailing"
+          "name": "RA Mobile Aesthetic Detailing"
         },
         "isRelatedTo": [
           {
@@ -345,6 +437,35 @@
       }
     </script>
 
+    <!-- Mobile Service schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Mobile Auto Detailing",
+        "name": "Mobile Aesthetic Detailing Services",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "RA Mobile Aesthetic Detailing",
+          "image": "https://ramobileaestheticdetailing.com/images/logo.png",
+          "telephone": "+13035551234",
+          "priceRange": "$50 - $120"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Colorado"
+        },
+        "description": "Premium mobile auto detailing service that comes to your location anywhere in Colorado. We bring our fully-equipped mobile unit to your home or workplace, providing the same high-quality detailing services you'd expect from a fixed location, but with added convenience.",
+        "serviceOutput": "Professionally detailed, clean, and aesthetically enhanced vehicles with the convenience of not having to leave your location",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "No additional charge for our mobile service within our Colorado service area"
+        }
+      }
+    </script>
+
     <!-- FAQ schema markup -->
     <script type="application/ld+json">
       {
@@ -353,26 +474,42 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What auto detailing services do you offer in Denver?",
+            "name": "What areas of Colorado do you serve with your mobile detailing?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We offer comprehensive auto detailing services including interior detailing, exterior detailing, full detail packages, paint correction, ceramic coating, headlight restoration, and mobile detailing services throughout the Denver metro area."
+              "text": "We proudly serve the entire state of Colorado with our mobile detailing services. Our primary service areas include Denver, Colorado Springs, Aurora, Fort Collins, Boulder, Lakewood, Thornton, Arvada, Westminster, Pueblo, Centennial, Greeley, Longmont, Loveland, Grand Junction, and Broomfield. We're committed to bringing our premium detailing services to customers throughout Colorado."
             }
           },
           {
             "@type": "Question",
-            "name": "How much does auto detailing cost in Denver?",
+            "name": "What does 'Aesthetic Detailing' mean?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our auto detailing services range from $50 for our Wash & Shine Package to $120 for our Deep Interior Detail or Hybrid Ceramic Wash & Wax. We also offer customized services based on your specific vehicle needs. All our packages include a satisfaction guarantee."
+              "text": "Aesthetic Detailing refers to our comprehensive approach that goes beyond standard cleaning. We focus on enhancing your vehicle's visual appeal through meticulous attention to detail, premium products, and specialized techniques that restore and elevate your car's appearance to showroom quality. Our aesthetic detailing services include paint correction, ceramic coating, interior restoration, and custom detailing solutions."
             }
           },
           {
             "@type": "Question",
-            "name": "Do you offer mobile auto detailing in Denver?",
+            "name": "How does your mobile detailing service work in Colorado?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we provide mobile auto detailing services throughout Denver and surrounding areas including Aurora, Lakewood, Littleton, and Englewood. Our fully-equipped mobile unit brings professional detailing services directly to your home or workplace."
+              "text": "Our mobile detailing service brings the detailing studio to you anywhere in Colorado! We arrive at your location (home, office, etc.) with our fully-equipped mobile unit containing everything needed for a professional detail - including our own water and power supply. We handle the entire process on-site, so you can continue with your day while we transform your vehicle. There's no additional charge for our mobile service within our standard Colorado service area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What auto detailing services do you offer throughout Colorado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer comprehensive auto detailing services including interior detailing, exterior detailing, full detail packages, paint correction, ceramic coating, headlight restoration, and mobile detailing services throughout the entire state of Colorado. Our mobile service brings professional detailing directly to your location for maximum convenience."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does auto detailing cost in Colorado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our auto detailing services range from $50 for our Wash & Shine Package to $120 for our Deep Interior Detail or Hybrid Ceramic Wash & Wax. We also offer customized services based on your specific vehicle needs. All our packages include a satisfaction guarantee and mobile service at no additional charge within our Colorado service area."
             }
           },
           {
@@ -380,15 +517,31 @@
             "name": "How long does a full auto detail take?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A full detail typically takes 4-6 hours depending on the size and condition of your vehicle. Our Deluxe Package may take 6-8 hours to ensure every detail is perfect. We prioritize quality and thoroughness over speed."
+              "text": "A full detail typically takes 4-6 hours depending on the size and condition of your vehicle. Our Deluxe Package may take 6-8 hours to ensure every detail is perfect. We prioritize quality and thoroughness over speed. The benefit of our mobile service is that you can continue with your day while we work on your vehicle at your location anywhere in Colorado."
             }
           },
           {
             "@type": "Question",
-            "name": "What makes RJ Auto Detailing the best in Denver?",
+            "name": "What makes RA Mobile Aesthetic Detailing the best in Colorado?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "RJ Auto Detailing stands out as Denver's premier auto detailing service due to our 10+ years of experience, certified technicians, use of premium products, attention to detail, and 100% satisfaction guarantee. We've earned a 4.9-star rating from over 120 satisfied customers."
+              "text": "RA Mobile Aesthetic Detailing stands out as Colorado's premier auto detailing service due to our 10+ years of experience, certified technicians, use of premium products, attention to detail, and 100% satisfaction guarantee. Our mobile service brings convenience without compromising quality, and we've earned a 4.9-star rating from over 120 satisfied customers throughout Colorado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer ceramic coating services throughout Colorado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer professional ceramic coating services throughout Colorado. Our mobile service allows us to apply high-quality ceramic coatings at your location, providing long-lasting protection and an exceptional shine for your vehicle. Our ceramic coatings offer superior protection against UV damage, chemical stains, and environmental contaminants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle detailing in different Colorado weather conditions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We're experienced in handling Colorado's diverse weather conditions. For extreme temperatures or inclement weather, we can arrange for indoor service when possible. Our mobile units are equipped to handle various conditions, and we'll work with you to schedule the optimal time for your detailing service based on weather forecasts. We prioritize both quality results and the protection of your vehicle during the detailing process."
             }
           }
         ]
@@ -482,7 +635,7 @@
     <!-- Fixed Header/Navigation -->
     <header class="sticky-header" data-sticky-offset="0">
       <nav>
-        <div class="logo">RJ Auto Detailing</div>
+        <div class="logo">RA Mobile Aesthetic Detailing</div>
         <!-- Desktop Navigation Links -->
         <div class="nav-links">
           <a
@@ -528,10 +681,17 @@
             >Testimonials</a
           >
           <a
-            href="#contact"
+            href="#faq"
             class="nav-link"
             data-animate="slide-down"
             data-delay="700"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="nav-link"
+            data-animate="slide-down"
+            data-delay="800"
             >Contact</a
           >
         </div>
@@ -551,6 +711,7 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -565,7 +726,7 @@
             itemscope
             itemtype="https://schema.org/ListItem"
           >
-            <a itemprop="item" href="https://www.rjautodetailing.com/">
+            <a itemprop="item" href="https://ramobileaestheticdetailing.com/">
               <span itemprop="name">Home</span>
             </a>
             <meta itemprop="position" content="1" />
@@ -578,14 +739,15 @@
         <div class="container">
           <div class="hero-content">
             <h1 data-animate="slide-up" data-delay="300">
-              Colorado's #1 Auto Detailing
+              Colorado's #1 Mobile Aesthetic Detailing Service
             </h1>
             <div class="typewriter-container">
               <span id="typewriter-text" class="accent-text"></span>
             </div>
             <p class="hero-subtitle" data-animate="slide-up" data-delay="500">
-              Professional Auto Detailing Services Throughout Colorado with 100%
-              Satisfaction Guarantee
+              Professional Mobile Auto Detailing Services Throughout Colorado
+              with 100% Satisfaction Guarantee - We Come To You Anywhere in
+              Colorado!
             </p>
             <div
               class="review-aggregate"
@@ -637,7 +799,7 @@
             <div class="about-image-container">
               <img
                 src="https://placehold.co/600x700"
-                alt="Professional Auto Detailing Technician at RJ Auto Detailing Denver - 10+ Years Experience"
+                alt="Professional Auto Detailing Technician at RA Mobile Aesthetic Detailing Denver - 10+ Years Experience"
                 class="lazy-image"
                 data-src="https://placehold.co/600x700"
               />
@@ -661,18 +823,21 @@
               >About Us</span
             >
             <h2 id="about-heading" data-animate="slide-up" data-delay="300">
-              Professional Auto Detailing Services
+              Premium Mobile Aesthetic Detailing Services
             </h2>
             <p>
-              RJ Auto Detailing is dedicated to providing meticulous care for
-              vehicles, ensuring that every detail is attended to with
+              RA Mobile Aesthetic Detailing is dedicated to providing meticulous
+              care for vehicles throughout the entire state of Colorado,
+              ensuring that every aesthetic detail is attended to with
               precision. With over a decade of experience, we've built a
-              reputation for excellence and customer satisfaction.
+              reputation for excellence and customer satisfaction by bringing
+              our services directly to you.
             </p>
             <p>
               Our team of certified professionals uses only premium products and
               advanced techniques to deliver exceptional results that enhance
-              both the appearance and longevity of your vehicle.
+              both the appearance and longevity of your vehicle, all from the
+              convenience of your home or workplace anywhere in Colorado.
             </p>
 
             <!-- Key features grid - 2x2 on desktop -->
@@ -728,7 +893,7 @@
         </div>
       </section>
 
-      <!-- Services Section - Horizontally scrollable service cards -->
+      <!-- Services Section - 2x2 grid layout for service cards -->
       <section
         class="services"
         id="services"
@@ -742,7 +907,7 @@
           >
             Our Services
           </h2>
-          <!-- Horizontally scrollable service cards on mobile -->
+          <!-- 2x2 grid layout for service cards -->
           <div class="services-grid stagger-list">
             <!-- Interior Detailing Service Card -->
             <div
@@ -804,12 +969,13 @@
               <div class="service-icon">
                 <i class="fas fa-home"></i>
               </div>
-              <h3>Mobile Services</h3>
+              <h3>Mobile Aesthetic Services</h3>
               <p>
-                Professional detailing brought directly to you. Our
-                fully-equipped mobile unit delivers top-tier service at your
-                home or workplace, ensuring convenience without compromising
-                quality.
+                Premium detailing brought directly to you anywhere in Colorado.
+                Our fully-equipped mobile unit delivers top-tier aesthetic
+                detailing at your home or workplace throughout the entire state,
+                saving you time while providing the same exceptional quality as
+                a fixed location studio.
               </p>
             </div>
           </div>
@@ -853,7 +1019,15 @@
             </div>
           </div>
 
-          <div class="pricing-container stagger-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+          <div
+            class="pricing-container stagger-list"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 20px;
+            "
+          >
             <!-- INTERIOR SERVICES -->
             <div style="width: 100%; margin-bottom: 20px">
               <h3
@@ -1144,7 +1318,7 @@
                 <img
                   data-src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
-                  alt="Premium Full Detail Service on Luxury Sports Car - RJ Auto Detailing Denver"
+                  alt="Premium Full Detail Service on Luxury Sports Car - RA Mobile Aesthetic Detailing Denver"
                   loading="lazy"
                   class="lazy-image"
                 />
@@ -1201,7 +1375,7 @@
                 <img
                   data-src="https://images.unsplash.com/photo-1583836631365-2d4dd298a8bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
-                  alt="Luxury Interior Detailing and Leather Conditioning - RJ Auto Detailing"
+                  alt="Luxury Interior Detailing and Leather Conditioning - RA Mobile Aesthetic Detailing"
                   loading="lazy"
                   class="lazy-image"
                 />
@@ -1257,7 +1431,7 @@
                 <img
                   data-src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
-                  alt="Professional Wheel and Tire Detailing Service - RJ Auto Detailing Denver"
+                  alt="Professional Wheel and Tire Detailing Service - RA Mobile Aesthetic Detailing Denver"
                   loading="lazy"
                   class="lazy-image"
                 />
@@ -1382,6 +1556,645 @@
         </div>
       </section>
 
+      <!-- Service Locations Section -->
+      <section
+        class="service-locations"
+        id="locations"
+        aria-labelledby="locations-heading"
+      >
+        <div class="container">
+          <div class="section-header text-center" data-animate="slide-up">
+            <h2
+              class="section-title"
+              id="locations-heading"
+            >
+              Our Service Locations Throughout Colorado
+            </h2>
+            <p class="section-subtitle" data-animate="slide-up" data-delay="100">
+              RA Mobile Aesthetic Detailing proudly serves the entire state of
+              Colorado. Our mobile detailing units bring premium auto detailing
+              services directly to your location.
+            </p>
+          </div>
+
+          <!-- Colorado map with highlighted regions -->
+          <div class="colorado-map-container" data-animate="fade-in" data-delay="200">
+            <div class="map-overlay">
+              <div class="map-region denver active" data-region="denver">
+                <div class="region-dot"></div>
+                <div class="region-label">Denver Metro</div>
+              </div>
+              <div class="map-region northern" data-region="northern">
+                <div class="region-dot"></div>
+                <div class="region-label">Northern CO</div>
+              </div>
+              <div class="map-region southern" data-region="southern">
+                <div class="region-dot"></div>
+                <div class="region-label">Southern CO</div>
+              </div>
+              <div class="map-region western" data-region="western">
+                <div class="region-dot"></div>
+                <div class="region-label">Western CO</div>
+              </div>
+            </div>
+            <img 
+              src="https://placehold.co/800x500" 
+              alt="Colorado Service Areas Map" 
+              class="colorado-map"
+              data-src="https://placehold.co/800x500"
+            />
+          </div>
+
+          <!-- Location details tabs -->
+          <div class="location-tabs" data-animate="slide-up" data-delay="300">
+            <div class="location-tab-buttons">
+              <button class="location-tab-btn active" data-tab="denver">Denver Metro</button>
+              <button class="location-tab-btn" data-tab="northern">Northern Colorado</button>
+              <button class="location-tab-btn" data-tab="southern">Southern Colorado</button>
+              <button class="location-tab-btn" data-tab="western">Western Colorado</button>
+            </div>
+            
+            <div class="location-tab-content">
+              <!-- Denver Metro Tab -->
+              <div class="location-tab-pane active" id="denver-tab">
+                <div class="location-content">
+                  <div class="location-icon">
+                    <i class="fas fa-city"></i>
+                  </div>
+                  <div class="location-details">
+                    <h3>Denver Metro Area</h3>
+                    <div class="location-cities">
+                      <span class="city-tag">Denver</span>
+                      <span class="city-tag">Aurora</span>
+                      <span class="city-tag">Lakewood</span>
+                      <span class="city-tag">Thornton</span>
+                      <span class="city-tag">Arvada</span>
+                      <span class="city-tag">Westminster</span>
+                      <span class="city-tag">Centennial</span>
+                      <span class="city-tag">Littleton</span>
+                      <span class="city-tag">Englewood</span>
+                      <span class="city-tag">Wheat Ridge</span>
+                    </div>
+                    <p>
+                      Our headquarters is located in Denver, making it easy for us to
+                      provide rapid service throughout the metro area. We offer same-day service
+                      in many Denver metro locations.
+                    </p>
+                    <div class="location-features">
+                      <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Same-day service available</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-car"></i>
+                        <span>All vehicle types serviced</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-home"></i>
+                        <span>Home & office visits</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Northern Colorado Tab -->
+              <div class="location-tab-pane" id="northern-tab">
+                <div class="location-content">
+                  <div class="location-icon">
+                    <i class="fas fa-mountain"></i>
+                  </div>
+                  <div class="location-details">
+                    <h3>Northern Colorado</h3>
+                    <div class="location-cities">
+                      <span class="city-tag">Fort Collins</span>
+                      <span class="city-tag">Boulder</span>
+                      <span class="city-tag">Longmont</span>
+                      <span class="city-tag">Loveland</span>
+                      <span class="city-tag">Greeley</span>
+                      <span class="city-tag">Broomfield</span>
+                      <span class="city-tag">Louisville</span>
+                      <span class="city-tag">Lafayette</span>
+                    </div>
+                    <p>
+                      Our Northern Colorado team provides the same exceptional
+                      detailing services to the Front Range communities north of
+                      Denver. We service the entire northern region with our fully-equipped mobile units.
+                    </p>
+                    <div class="location-features">
+                      <div class="feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Regular weekly service</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-snowflake"></i>
+                        <span>All-weather service options</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-building"></i>
+                        <span>Corporate fleet services</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Southern Colorado Tab -->
+              <div class="location-tab-pane" id="southern-tab">
+                <div class="location-content">
+                  <div class="location-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                  </div>
+                  <div class="location-details">
+                    <h3>Southern Colorado</h3>
+                    <div class="location-cities">
+                      <span class="city-tag">Colorado Springs</span>
+                      <span class="city-tag">Pueblo</span>
+                      <span class="city-tag">Canon City</span>
+                      <span class="city-tag">Monument</span>
+                      <span class="city-tag">Fountain</span>
+                      <span class="city-tag">Security-Widefield</span>
+                    </div>
+                    <p>
+                      Our Southern Colorado mobile units bring premium detailing
+                      services to the Pikes Peak region and beyond. We're proud to serve
+                      the military communities and families throughout southern Colorado.
+                    </p>
+                    <div class="location-features">
+                      <div class="feature">
+                        <i class="fas fa-medal"></i>
+                        <span>Military discounts</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Base access approved</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Group bookings available</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Western Colorado Tab -->
+              <div class="location-tab-pane" id="western-tab">
+                <div class="location-content">
+                  <div class="location-icon">
+                    <i class="fas fa-tree"></i>
+                  </div>
+                  <div class="location-details">
+                    <h3>Western Colorado</h3>
+                    <div class="location-cities">
+                      <span class="city-tag">Grand Junction</span>
+                      <span class="city-tag">Montrose</span>
+                      <span class="city-tag">Glenwood Springs</span>
+                      <span class="city-tag">Aspen</span>
+                      <span class="city-tag">Vail</span>
+                      <span class="city-tag">Steamboat Springs</span>
+                    </div>
+                    <p>
+                      Our Western Slope team provides exceptional mobile detailing
+                      services to Colorado's mountain and western communities. We understand
+                      the unique challenges of mountain living and vehicle maintenance.
+                    </p>
+                    <div class="location-features">
+                      <div class="feature">
+                        <i class="fas fa-sun"></i>
+                        <span>UV protection services</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-snowflake"></i>
+                        <span>Winter protection packages</span>
+                      </div>
+                      <div class="feature">
+                        <i class="fas fa-hotel"></i>
+                        <span>Resort & vacation home service</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="locations-cta card" data-animate="slide-up" data-delay="600">
+            <div class="cta-content">
+              <div class="cta-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="cta-text">
+                <h3>Don't see your city listed?</h3>
+                <p>
+                  We likely still service your area! Contact us to confirm
+                  availability and schedule your mobile detailing appointment.
+                </p>
+              </div>
+              <button class="cta-button btn btn-primary">Contact Us Today</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Add CSS for the new Service Locations section -->
+      <style>
+        /* Service Locations Section Styles */
+        .service-locations {
+          padding: 6rem 0;
+          background-color: var(--background-light);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .service-locations::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, rgba(200, 16, 46, 0.05) 0%, rgba(200, 16, 46, 0) 70%);
+          border-radius: 50%;
+          z-index: 0;
+        }
+        
+        .service-locations::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 250px;
+          height: 250px;
+          background: radial-gradient(circle, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0) 70%);
+          border-radius: 50%;
+          z-index: 0;
+        }
+        
+        .service-locations .section-header {
+          margin-bottom: 3rem;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .text-center {
+          text-align: center;
+        }
+        
+        .colorado-map-container {
+          position: relative;
+          max-width: 800px;
+          margin: 0 auto 4rem;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .colorado-map {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 16px;
+        }
+        
+        .map-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+        
+        .map-region {
+          position: absolute;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .map-region.denver {
+          top: 45%;
+          left: 40%;
+        }
+        
+        .map-region.northern {
+          top: 25%;
+          left: 38%;
+        }
+        
+        .map-region.southern {
+          top: 65%;
+          left: 42%;
+        }
+        
+        .map-region.western {
+          top: 40%;
+          left: 15%;
+        }
+        
+        .region-dot {
+          width: 16px;
+          height: 16px;
+          background-color: var(--accent-color);
+          border-radius: 50%;
+          position: relative;
+          box-shadow: 0 0 0 rgba(200, 16, 46, 0.4);
+          animation: pulse 2s infinite;
+        }
+        
+        .map-region.active .region-dot {
+          background-color: var(--primary-color);
+        }
+        
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(200, 16, 46, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(200, 16, 46, 0);
+          }
+        }
+        
+        .region-label {
+          position: absolute;
+          white-space: nowrap;
+          background-color: var(--primary-color);
+          color: white;
+          padding: 4px 10px;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s ease, top 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .map-region:hover .region-label,
+        .map-region.active .region-label {
+          opacity: 1;
+          top: -40px;
+        }
+        
+        .location-tabs {
+          margin-bottom: 4rem;
+        }
+        
+        .location-tab-buttons {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 2rem;
+        }
+        
+        .location-tab-btn {
+          background-color: transparent;
+          border: 2px solid var(--primary-color);
+          color: var(--primary-color);
+          padding: 10px 20px;
+          border-radius: 30px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .location-tab-btn:hover {
+          background-color: rgba(26, 26, 26, 0.05);
+        }
+        
+        .location-tab-btn.active {
+          background-color: var(--primary-color);
+          color: white;
+        }
+        
+        .location-tab-content {
+          background-color: white;
+          border-radius: 16px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          overflow: hidden;
+        }
+        
+        .location-tab-pane {
+          display: none;
+          padding: 2rem;
+        }
+        
+        .location-tab-pane.active {
+          display: block;
+          animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        .location-content {
+          display: flex;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        
+        .location-icon {
+          flex-shrink: 0;
+          width: 80px;
+          height: 80px;
+          background-color: rgba(26, 26, 26, 0.05);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          color: var(--accent-color);
+        }
+        
+        .location-details {
+          flex: 1;
+        }
+        
+        .location-details h3 {
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        
+        .location-cities {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 1.5rem;
+        }
+        
+        .city-tag {
+          background-color: rgba(26, 26, 26, 0.05);
+          padding: 5px 12px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: var(--text-dark);
+          transition: all 0.3s ease;
+        }
+        
+        .city-tag:hover {
+          background-color: var(--accent-color);
+          color: white;
+          transform: translateY(-3px);
+        }
+        
+        .location-features {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          margin-top: 1.5rem;
+        }
+        
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        
+        .feature i {
+          color: var(--accent-color);
+          font-size: 1.2rem;
+        }
+        
+        .locations-cta {
+          padding: 0;
+          overflow: hidden;
+          border-radius: 16px;
+          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+          border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .cta-content {
+          display: flex;
+          align-items: center;
+          padding: 2rem;
+          gap: 2rem;
+          position: relative;
+        }
+        
+        .cta-icon {
+          flex-shrink: 0;
+          width: 70px;
+          height: 70px;
+          background-color: rgba(200, 16, 46, 0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.8rem;
+          color: var(--accent-color);
+        }
+        
+        .cta-text {
+          flex: 1;
+        }
+        
+        .cta-text h3 {
+          color: var(--primary-color);
+          margin-bottom: 0.5rem;
+          font-size: 1.4rem;
+        }
+        
+        .cta-text p {
+          margin-bottom: 0;
+          color: var(--text-dark);
+        }
+        
+        .locations-cta .cta-button {
+          flex-shrink: 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+          .cta-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+          }
+          
+          .locations-cta .cta-button {
+            width: 100%;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .location-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+          }
+          
+          .location-cities {
+            justify-content: center;
+          }
+          
+          .location-features {
+            justify-content: center;
+          }
+          
+          .location-tab-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .location-tab-btn {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+          }
+        }
+      </style>
+      
+      <!-- Add JavaScript for the interactive map and tabs -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Map region interaction
+          const mapRegions = document.querySelectorAll('.map-region');
+          const locationTabs = document.querySelectorAll('.location-tab-btn');
+          
+          // Function to activate a region and corresponding tab
+          function activateRegion(regionName) {
+            // Deactivate all regions and tabs
+            mapRegions.forEach(region => region.classList.remove('active'));
+            locationTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Activate the selected region and tab
+            document.querySelector(`.map-region.${regionName}`).classList.add('active');
+            document.querySelector(`.location-tab-btn[data-tab="${regionName}"]`).classList.add('active');
+            
+            // Show the corresponding tab content
+            document.querySelectorAll('.location-tab-pane').forEach(pane => pane.classList.remove('active'));
+            document.getElementById(`${regionName}-tab`).classList.add('active');
+          }
+          
+          // Add click event listeners to map regions
+          mapRegions.forEach(region => {
+            region.addEventListener('click', function() {
+              const regionName = this.dataset.region;
+              activateRegion(regionName);
+            });
+          });
+          
+          // Add click event listeners to location tabs
+          locationTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+              const tabName = this.dataset.tab;
+              activateRegion(tabName);
+            });
+          });
+        });
+      </script>
+
       <!-- Testimonials Section - Client reviews and feedback -->
       <section
         class="testimonials"
@@ -1417,10 +2230,10 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="testimonial-text">
-                    RJ Auto Detailing transformed my 5-year-old car into what
-                    looks like a brand new vehicle. The attention to detail was
-                    impressive, and the convenience of their mobile service made
-                    the experience even better. Highly recommend!
+                    RA Mobile Aesthetic Detailing transformed my 5-year-old car
+                    into what looks like a brand new vehicle. The attention to
+                    detail was impressive, and the convenience of their mobile
+                    service made the experience even better. Highly recommend!
                   </p>
                   <!-- Client information with avatar -->
                   <div class="testimonial-author">
@@ -1447,11 +2260,11 @@
                     <i class="fas fa-star"></i>
                   </div>
                   <p class="testimonial-text">
-                    I've tried several detailing services in the area, but RJ
-                    Auto Detailing stands out for their professionalism and
-                    quality of work. They removed stains from my seats that I
-                    thought were permanent. My car hasn't looked this good since
-                    I bought it!
+                    I've tried several detailing services in the area, but RA
+                    Mobile Aesthetic Detailing stands out for their
+                    professionalism and quality of work. They removed stains
+                    from my seats that I thought were permanent. My car hasn't
+                    looked this good since I bought it!
                   </p>
                   <div class="testimonial-author">
                     <img
@@ -1477,11 +2290,11 @@
                     <i class="fas fa-star-half-alt"></i>
                   </div>
                   <p class="testimonial-text">
-                    The team at RJ Auto Detailing went above and beyond with my
-                    SUV. They were punctual, professional, and the results
-                    exceeded my expectations. The ceramic coating they applied
-                    has kept my car looking amazing for months. Worth every
-                    penny!
+                    The team at RA Mobile Aesthetic Detailing went above and
+                    beyond with my SUV. They were punctual, professional, and
+                    the results exceeded my expectations. The ceramic coating
+                    they applied has kept my car looking amazing for months.
+                    Worth every penny!
                   </p>
                   <div class="testimonial-author">
                     <img
@@ -1499,6 +2312,895 @@
           </div>
         </div>
       </section>
+
+      <!-- FAQ Section - Common questions and answers -->
+      <section class="faq" id="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <div class="faq-header" data-animate="slide-up">
+            <h2 class="section-title" id="faq-heading">
+              Frequently Asked Questions
+            </h2>
+            <p class="faq-subtitle">Find answers to common questions about our mobile detailing services</p>
+          </div>
+          
+          <div class="faq-wrapper">
+            <div class="faq-categories">
+              <button class="faq-category-btn active" data-category="all">All Questions</button>
+              <button class="faq-category-btn" data-category="services">Services</button>
+              <button class="faq-category-btn" data-category="pricing">Pricing</button>
+              <button class="faq-category-btn" data-category="process">Process</button>
+            </div>
+            
+            <div class="faq-search">
+              <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="faqSearch" placeholder="Search questions..." class="search-input">
+              </div>
+            </div>
+            
+            <div class="faq-container">
+              <div class="faq-item" data-animate="fade-in" data-delay="300" data-category="services">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>
+                      What areas of Colorado do you serve with your mobile detailing?
+                    </h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    We proudly serve the entire state of Colorado with our mobile
+                    detailing services. Our primary service areas include Denver,
+                    Colorado Springs, Aurora, Fort Collins, Boulder, Lakewood,
+                    Thornton, Arvada, Westminster, Pueblo, Centennial, Greeley,
+                    Longmont, Loveland, Grand Junction, and Broomfield. We're
+                    committed to bringing our premium detailing services to
+                    customers throughout Colorado.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="400" data-category="process">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>
+                      How does your mobile detailing service work in Colorado?
+                    </h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Our mobile detailing service brings the detailing studio to
+                    you anywhere in Colorado! We arrive at your location (home,
+                    office, etc.) with our fully-equipped mobile unit containing
+                    everything needed for a professional detail - including our
+                    own water and power supply. We handle the entire process
+                    on-site, so you can continue with your day while we transform
+                    your vehicle. There's no additional charge for our mobile
+                    service within our standard Colorado service area.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="500" data-category="services">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>What does 'Aesthetic Detailing' mean?</h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Aesthetic Detailing refers to our comprehensive approach that
+                    goes beyond standard cleaning. We focus on enhancing your
+                    vehicle's visual appeal through meticulous attention to
+                    detail, premium products, and specialized techniques that
+                    restore and elevate your car's appearance to showroom quality.
+                    Our aesthetic detailing services include paint correction,
+                    ceramic coating, interior restoration, and custom detailing
+                    solutions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="600" data-category="services">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-list-ul"></i>
+                    </div>
+                    <h3>
+                      What auto detailing services do you offer throughout Colorado?
+                    </h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    We offer comprehensive auto detailing services including
+                    interior detailing, exterior detailing, full detail packages,
+                    paint correction, ceramic coating, headlight restoration, and
+                    mobile detailing services throughout the entire state of
+                    Colorado. Our mobile service brings professional detailing
+                    directly to your location for maximum convenience.
+                  </p>
+                  <div class="answer-features">
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Interior Detailing</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Exterior Detailing</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Full Detail Packages</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Paint Correction</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Ceramic Coating</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Headlight Restoration</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="700" data-category="pricing">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>How much does auto detailing cost in Colorado?</h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Our auto detailing services range from $50 for our Wash &
+                    Shine Package to $120 for our Deep Interior Detail or Hybrid
+                    Ceramic Wash & Wax. We also offer customized services based on
+                    your specific vehicle needs. All our packages include a
+                    satisfaction guarantee and mobile service at no additional
+                    charge within our Colorado service area.
+                  </p>
+                  <div class="price-table">
+                    <div class="price-row header">
+                      <div class="price-cell">Service</div>
+                      <div class="price-cell">Price Range</div>
+                    </div>
+                    <div class="price-row">
+                      <div class="price-cell">Wash & Shine Package</div>
+                      <div class="price-cell">$50-$80</div>
+                    </div>
+                    <div class="price-row">
+                      <div class="price-cell">Basic Interior Clean</div>
+                      <div class="price-cell">$60-$80</div>
+                    </div>
+                    <div class="price-row">
+                      <div class="price-cell">Deep Interior Detail</div>
+                      <div class="price-cell">$90-$120</div>
+                    </div>
+                    <div class="price-row">
+                      <div class="price-cell">Hybrid Ceramic Wash & Wax</div>
+                      <div class="price-cell">$90-$120</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="800" data-category="process">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>
+                      How do you handle detailing in different Colorado weather conditions?
+                    </h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    We're experienced in handling Colorado's diverse weather
+                    conditions. For extreme temperatures or inclement weather, we
+                    can arrange for indoor service when possible. Our mobile units
+                    are equipped to handle various conditions, and we'll work with
+                    you to schedule the optimal time for your detailing service
+                    based on weather forecasts. We prioritize both quality results
+                    and the protection of your vehicle during the detailing
+                    process.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item" data-animate="fade-in" data-delay="900" data-category="services">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-award"></i>
+                    </div>
+                    <h3>
+                      What makes RA Mobile Aesthetic Detailing the best in Colorado?
+                    </h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    RA Mobile Aesthetic Detailing stands out as Colorado's premier
+                    auto detailing service due to our 10+ years of experience,
+                    certified technicians, use of premium products, attention to
+                    detail, and 100% satisfaction guarantee. Our mobile service
+                    brings convenience without compromising quality, and we've
+                    earned a 4.9-star rating from over 120 satisfied customers
+                    throughout Colorado.
+                  </p>
+                  <div class="answer-features">
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>10+ Years Experience</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Certified Technicians</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Premium Products</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>100% Satisfaction Guarantee</span>
+                    </div>
+                    <div class="answer-feature">
+                      <i class="fas fa-check-circle"></i>
+                      <span>4.9-Star Rating (120+ Reviews)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="faq-item" data-animate="fade-in" data-delay="950" data-category="process">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>How long does a full auto detail take?</h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    A full detail typically takes 4-6 hours depending on the size and condition of your vehicle. Our Deluxe Package may take 6-8 hours to ensure every detail is perfect. We prioritize quality and thoroughness over speed. The benefit of our mobile service is that you can continue with your day while we work on your vehicle at your location anywhere in Colorado.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item" data-animate="fade-in" data-delay="1000" data-category="services">
+                <div class="faq-question">
+                  <div class="question-content">
+                    <div class="question-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Do you offer ceramic coating services throughout Colorado?</h3>
+                  </div>
+                  <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes, we offer professional ceramic coating services throughout Colorado. Our mobile service allows us to apply high-quality ceramic coatings at your location, providing long-lasting protection and an exceptional shine for your vehicle. Our ceramic coatings offer superior protection against UV damage, chemical stains, and environmental contaminants.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-no-results" style="display: none;">
+              <div class="no-results-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3>No matching questions found</h3>
+              <p>Try different keywords or browse all questions</p>
+              <button class="reset-search-btn">View All Questions</button>
+            </div>
+          </div>
+          
+          <div class="faq-cta">
+            <div class="faq-cta-content">
+              <div class="faq-cta-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="faq-cta-text">
+                <h3>Still have questions?</h3>
+                <p>We're here to help! Contact our team for personalized assistance with any questions about our mobile detailing services.</p>
+              </div>
+              <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Add CSS for the modernized FAQ section -->
+      <style>
+        /* Modern FAQ Section Styles */
+        .faq {
+          padding: 6rem 0;
+          background-color: var(--background-light);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .faq::before {
+          content: '';
+          position: absolute;
+          top: -150px;
+          right: -150px;
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, rgba(200, 16, 46, 0.05) 0%, rgba(200, 16, 46, 0) 70%);
+          border-radius: 50%;
+          z-index: 0;
+        }
+        
+        .faq::after {
+          content: '';
+          position: absolute;
+          bottom: -150px;
+          left: -150px;
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0) 70%);
+          border-radius: 50%;
+          z-index: 0;
+        }
+        
+        .faq-header {
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .faq-subtitle {
+          font-size: 1.1rem;
+          color: var(--text-muted);
+          margin-top: 0.5rem;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        .faq-wrapper {
+          position: relative;
+          z-index: 1;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        
+        .faq-categories {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 2rem;
+        }
+        
+        .faq-category-btn {
+          background-color: transparent;
+          border: 2px solid var(--primary-color);
+          color: var(--primary-color);
+          padding: 8px 16px;
+          border-radius: 30px;
+          font-weight: 600;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .faq-category-btn:hover {
+          background-color: rgba(26, 26, 26, 0.05);
+        }
+        
+        .faq-category-btn.active {
+          background-color: var(--primary-color);
+          color: white;
+        }
+        
+        .faq-search {
+          margin-bottom: 2.5rem;
+        }
+        
+        .search-container {
+          position: relative;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+        
+        .search-input {
+          width: 100%;
+          padding: 15px 20px 15px 50px;
+          border-radius: 50px;
+          border: 1px solid rgba(0,0,0,0.1);
+          background-color: white;
+          font-size: 1rem;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+          transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+          outline: none;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          border-color: var(--accent-color);
+        }
+        
+        .search-icon {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--text-muted);
+          font-size: 1.1rem;
+        }
+        
+        .faq-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+          background-color: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          transition: all 0.3s ease;
+          border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .faq-item:hover {
+          box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+          transform: translateY(-2px);
+        }
+        
+        .faq-question {
+          padding: 1.5rem;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          transition: background-color 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question {
+          background-color: rgba(26, 26, 26, 0.02);
+        }
+        
+        .question-content {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          flex: 1;
+        }
+        
+        .question-icon {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          background-color: rgba(200, 16, 46, 0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--accent-color);
+          font-size: 1rem;
+        }
+        
+        .faq-question h3 {
+          margin: 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: var(--text-dark);
+          line-height: 1.4;
+        }
+        
+        .faq-toggle-icon {
+          color: var(--accent-color);
+          transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle-icon {
+          transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease, padding 0.3s ease;
+          padding: 0 1.5rem;
+        }
+        
+        .faq-item.active .faq-answer {
+          max-height: 1000px;
+          padding: 0 1.5rem 1.5rem;
+        }
+        
+        .faq-answer p {
+          margin-top: 0;
+          color: var(--text-dark);
+          line-height: 1.6;
+        }
+        
+        .answer-features {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 1rem;
+        }
+        
+        .answer-feature {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background-color: rgba(26, 26, 26, 0.03);
+          padding: 8px 15px;
+          border-radius: 30px;
+          font-size: 0.9rem;
+        }
+        
+        .answer-feature i {
+          color: var(--accent-color);
+        }
+        
+        .price-table {
+          margin-top: 1.5rem;
+          border-radius: 8px;
+          overflow: hidden;
+          border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .price-row {
+          display: flex;
+          border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .price-row:last-child {
+          border-bottom: none;
+        }
+        
+        .price-row.header {
+          background-color: rgba(26, 26, 26, 0.03);
+          font-weight: 600;
+        }
+        
+        .price-cell {
+          padding: 12px 15px;
+          flex: 1;
+        }
+        
+        .price-cell:last-child {
+          text-align: right;
+          font-weight: 600;
+          color: var(--accent-color);
+        }
+        
+        .price-row.header .price-cell:last-child {
+          color: var(--text-dark);
+        }
+        
+        .faq-no-results {
+          text-align: center;
+          padding: 3rem 1rem;
+          background-color: white;
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .no-results-icon {
+          width: 70px;
+          height: 70px;
+          background-color: rgba(26, 26, 26, 0.03);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+          font-size: 1.8rem;
+          color: var(--text-muted);
+        }
+        
+        .faq-no-results h3 {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          color: var(--text-dark);
+        }
+        
+        .faq-no-results p {
+          color: var(--text-muted);
+          margin-bottom: 1.5rem;
+        }
+        
+        .reset-search-btn {
+          background-color: var(--primary-color);
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 30px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .reset-search-btn:hover {
+          background-color: var(--primary-dark);
+        }
+        
+        .faq-cta {
+          margin-top: 4rem;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .faq-cta-content {
+          background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+          border-radius: 16px;
+          padding: 2.5rem;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          color: white;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-cta-icon {
+          width: 80px;
+          height: 80px;
+          background-color: rgba(255,255,255,0.15);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          flex-shrink: 0;
+        }
+        
+        .faq-cta-text {
+          flex: 1;
+        }
+        
+        .faq-cta-text h3 {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+        }
+        
+        .faq-cta-text p {
+          margin-bottom: 0;
+          opacity: 0.9;
+        }
+        
+        .faq-cta .btn {
+          background-color: white;
+          color: var(--primary-color);
+          border: none;
+          padding: 12px 25px;
+          border-radius: 30px;
+          font-weight: 600;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        
+        .faq-cta .btn:hover {
+          background-color: rgba(255,255,255,0.9);
+          transform: translateY(-3px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+          .faq-cta-content {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+          }
+          
+          .faq-cta .btn {
+            width: 100%;
+            margin-top: 1.5rem;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .faq {
+            padding: 4rem 0;
+          }
+          
+          .faq-question h3 {
+            font-size: 1rem;
+          }
+          
+          .question-icon {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            font-size: 0.9rem;
+          }
+          
+          .faq-question {
+            padding: 1.2rem;
+          }
+          
+          .faq-item.active .faq-answer {
+            padding: 0 1.2rem 1.2rem;
+          }
+          
+          .answer-features {
+            gap: 8px;
+          }
+          
+          .answer-feature {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .faq-categories {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .faq-category-btn {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+          }
+          
+          .question-content {
+            gap: 0.8rem;
+          }
+          
+          .question-icon {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            font-size: 0.8rem;
+          }
+        }
+      </style>
+      
+      <!-- Add JavaScript for the FAQ functionality -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // FAQ accordion functionality
+          const faqItems = document.querySelectorAll('.faq-item');
+          
+          faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+              // Close other items
+              faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                  otherItem.classList.remove('active');
+                }
+              });
+              
+              // Toggle current item
+              item.classList.toggle('active');
+            });
+          });
+          
+          // FAQ category filtering
+          const categoryButtons = document.querySelectorAll('.faq-category-btn');
+          
+          categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+              // Remove active class from all buttons
+              categoryButtons.forEach(btn => btn.classList.remove('active'));
+              
+              // Add active class to clicked button
+              button.classList.add('active');
+              
+              const category = button.dataset.category;
+              
+              // Show/hide FAQ items based on category
+              faqItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                  item.style.display = 'block';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+              
+              // Hide no results message
+              document.querySelector('.faq-no-results').style.display = 'none';
+              
+              // Clear search input
+              document.getElementById('faqSearch').value = '';
+            });
+          });
+          
+          // FAQ search functionality
+          const searchInput = document.getElementById('faqSearch');
+          const noResultsElement = document.querySelector('.faq-no-results');
+          const resetSearchBtn = document.querySelector('.reset-search-btn');
+          
+          searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let resultsFound = false;
+            
+            // Reset category buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+            
+            faqItems.forEach(item => {
+              const questionText = item.querySelector('h3').textContent.toLowerCase();
+              const answerText = item.querySelector('.faq-answer p').textContent.toLowerCase();
+              
+              if (searchTerm === '' || questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                item.style.display = 'block';
+                resultsFound = true;
+              } else {
+                item.style.display = 'none';
+              }
+            });
+            
+            // Show/hide no results message
+            if (!resultsFound && searchTerm !== '') {
+              noResultsElement.style.display = 'block';
+            } else {
+              noResultsElement.style.display = 'none';
+            }
+          });
+          
+          // Reset search button
+          resetSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            
+            // Show all FAQ items
+            faqItems.forEach(item => {
+              item.style.display = 'block';
+            });
+            
+            // Hide no results message
+            noResultsElement.style.display = 'none';
+            
+            // Reset category buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+          });
+          
+          // Open first FAQ item by default
+          if (faqItems.length > 0) {
+            faqItems[0].classList.add('active');
+          }
+        });
+      </script>
 
       <!-- Contact Section - Contact information and form -->
       <section class="contact" id="contact" aria-labelledby="contact-heading">
@@ -1567,7 +3269,7 @@
                 </div>
                 <div class="contact-text">
                   <h4>Email Us</h4>
-                  <p>info@rjautodetailing.com</p>
+                  <p>info@ramobileaestheticdetailing.com</p>
                   <p>We respond within 24 hours</p>
                 </div>
               </div>
@@ -1688,12 +3390,12 @@
           <div class="footer-container stagger-list">
             <!-- Company information and social links -->
             <div class="footer-about" data-animate="slide-up" data-delay="100">
-              <div class="footer-logo">RJ Auto Detailing</div>
+              <div class="footer-logo">RA Mobile Aesthetic Detailing</div>
               <p>
                 Providing premium auto detailing services to keep your vehicle
                 looking its best. Our professional team is dedicated to
-                excellence and customer satisfaction throughout the Denver metro
-                area.
+                excellence and customer satisfaction throughout the entire state
+                of Colorado.
               </p>
               <!-- Social media links -->
               <div class="social-links">
@@ -1747,6 +3449,11 @@
                   >
                 </li>
                 <li>
+                  <a href="#faq" class="hover-lift"
+                    ><i class="fas fa-chevron-right"></i> FAQ</a
+                  >
+                </li>
+                <li>
                   <a href="#contact" class="hover-lift"
                     ><i class="fas fa-chevron-right"></i> Contact</a
                   >
@@ -1767,7 +3474,7 @@
                 itemtype="https://schema.org/LocalBusiness"
               >
                 <span class="business-name" itemprop="name"
-                  >RJ Auto Detailing</span
+                  >RA Mobile Aesthetic Detailing</span
                 >
                 <div
                   class="business-address"
@@ -1788,7 +3495,9 @@
                   </p>
                   <p>
                     <i class="fas fa-envelope"></i>
-                    <span itemprop="email">info@rjautodetailing.com</span>
+                    <span itemprop="email"
+                      >info@ramobileaestheticdetailing.com</span
+                    >
                   </p>
                 </div>
                 <div class="business-hours">
@@ -1804,7 +3513,8 @@
           <!-- Copyright information -->
           <div class="copyright" data-animate="fade" data-delay="500">
             <p>
-              &copy; 2025 RJ Auto Detailing. All Rights Reserved. Designed with
+              &copy; 2025 RA Mobile Aesthetic Detailing. All Rights Reserved.
+              Designed with
               <i class="fas fa-heart" style="color: var(--accent-color)"></i> by
               <a href="https://github.com/clevernat">@clevernat</a>
             </p>
@@ -2018,7 +3728,7 @@
 
         // Show welcome toast after a delay
         setTimeout(() => {
-          ModernUI.toast.success("Welcome to RJ Auto Detailing!");
+          ModernUI.toast.success("Welcome to RA Mobile Aesthetic Detailing!");
         }, 2000);
       });
 

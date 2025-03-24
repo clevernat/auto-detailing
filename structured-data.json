@@ -1,17 +1,17 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "RJ Auto Detailing",
+  "name": "RA Mobile Aesthetic Detailing",
   "image": [
-    "https://www.rjautodetailing.com/images/logo.png",
-    "https://www.rjautodetailing.com/images/storefront.jpg",
-    "https://www.rjautodetailing.com/images/team.jpg"
+    "https://ramobileaestheticdetailing.com/images/logo.png",
+    "https://ramobileaestheticdetailing.com/images/mobile-unit.jpg",
+    "https://ramobileaestheticdetailing.com/images/team.jpg"
   ],
-  "@id": "https://www.rjautodetailing.com",
-  "url": "https://www.rjautodetailing.com",
+  "@id": "https://ramobileaestheticdetailing.com",
+  "url": "https://ramobileaestheticdetailing.com",
   "telephone": "+13035551234",
-  "email": "info@rjautodetailing.com",
-  "priceRange": "$99-$499",
+  "email": "info@ramobileaestheticdetailing.com",
+  "priceRange": "$50-$120",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1234 Detail Drive",
@@ -22,8 +22,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 39.7392,
-    "longitude": -104.9903
+    "latitude": 39.5501,
+    "longitude": -105.7821
   },
   "openingHoursSpecification": [
     {
@@ -43,28 +43,30 @@
       "dayOfWeek": "Saturday",
       "opens": "09:00",
       "closes": "16:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Sunday",
-      "opens": "10:00",
-      "closes": "14:00"
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/rjautodetailing",
-    "https://www.instagram.com/rjautodetailing",
-    "https://twitter.com/RJAutoDetailing",
-    "https://www.youtube.com/channel/rjautodetailing",
-    "https://www.yelp.com/biz/rj-auto-detailing-denver"
+    "https://www.facebook.com/ramobileaestheticdetailing",
+    "https://www.instagram.com/ramobileaestheticdetailing",
+    "https://twitter.com/ramobileaestheticdetailing",
+    "https://www.yelp.com/biz/ra-mobile-aesthetic-detailing-denver",
+    "https://www.linkedin.com/company/ra-mobile-aesthetic-detailing"
   ],
-  "description": "Denver's top-rated auto detailing service specializing in premium car care, paint correction, ceramic coating, and interior detailing. Serving Denver and surrounding areas with mobile detailing options.",
-  "keywords": "auto detailing, car detailing, ceramic coating, paint correction, interior detailing, mobile detailing, Denver, Colorado",
-  "slogan": "Restoring Your Vehicle's Beauty, One Detail at a Time",
+  "description": "Colorado's #1 mobile auto detailing service offering professional interior, exterior, and full detail packages delivered directly to your location throughout Colorado. Specializing in aesthetic detailing with 100% satisfaction guaranteed.",
+  "keywords": "mobile auto detailing Colorado, aesthetic car detailing Colorado, RA Mobile Aesthetic Detailing, mobile detailing service Colorado, premium auto detailing, interior detailing Colorado, exterior detailing services, paint correction Colorado, ceramic coating Colorado, headlight restoration Colorado, professional car detailing Colorado Springs, Fort Collins auto detailing, Boulder mobile detailing, Pueblo car detailing, Grand Junction auto detailing",
+  "slogan": "Premium Mobile Detailing That Comes To You Anywhere in Colorado",
   "areaServed": [
+    {
+      "@type": "State",
+      "name": "Colorado"
+    },
     {
       "@type": "City",
       "name": "Denver"
+    },
+    {
+      "@type": "City",
+      "name": "Colorado Springs"
     },
     {
       "@type": "City",
@@ -72,15 +74,31 @@
     },
     {
       "@type": "City",
+      "name": "Fort Collins"
+    },
+    {
+      "@type": "City",
+      "name": "Boulder"
+    },
+    {
+      "@type": "City",
       "name": "Lakewood"
     },
     {
       "@type": "City",
-      "name": "Littleton"
+      "name": "Thornton"
     },
     {
       "@type": "City",
-      "name": "Englewood"
+      "name": "Arvada"
+    },
+    {
+      "@type": "City",
+      "name": "Westminster"
+    },
+    {
+      "@type": "City",
+      "name": "Pueblo"
     },
     {
       "@type": "City",
@@ -88,22 +106,38 @@
     },
     {
       "@type": "City",
-      "name": "Highlands Ranch"
+      "name": "Greeley"
+    },
+    {
+      "@type": "City",
+      "name": "Longmont"
+    },
+    {
+      "@type": "City",
+      "name": "Loveland"
+    },
+    {
+      "@type": "City",
+      "name": "Grand Junction"
+    },
+    {
+      "@type": "City",
+      "name": "Broomfield"
     }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Auto Detailing Services",
+    "name": "Mobile Auto Detailing Services",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Ceramic Coating",
-          "description": "Long-lasting ceramic coating protection for your vehicle's paint with 2-5 year warranties available.",
+          "name": "Basic Interior Clean",
+          "description": "Interior vacuuming (seats, floor, mats), dashboard, console & door panels wiped, windows cleaned (inside only), tornado gun to blast out dust & dirt from cracks & vents",
           "offers": {
             "@type": "Offer",
-            "price": "699.00",
+            "price": "60.00",
             "priceCurrency": "USD"
           }
         }
@@ -112,11 +146,11 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Paint Correction",
-          "description": "Professional paint correction to remove swirls, scratches and restore your vehicle's finish.",
+          "name": "Deep Interior Detail",
+          "description": "Basic Interior Clean plus carpet & seat extraction, leather seat cleaning & conditioning, steam cleaning for sanitization, tornado gun for deep cleaning, odor removal treatment, pet hair removal",
           "offers": {
             "@type": "Offer",
-            "price": "499.00",
+            "price": "90.00",
             "priceCurrency": "USD"
           }
         }
@@ -125,11 +159,11 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Interior Detailing",
-          "description": "Complete interior cleaning and conditioning for your vehicle.",
+          "name": "Wash & Shine Package",
+          "description": "Foam wash & rinse, hand washed with microfiber towels, tornado gun for blasting dirt, wheels & tires cleaned, tire shine application",
           "offers": {
             "@type": "Offer",
-            "price": "199.00",
+            "price": "50.00",
             "priceCurrency": "USD"
           }
         }
@@ -138,11 +172,11 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Exterior Detailing",
-          "description": "Comprehensive exterior cleaning, polishing and protection.",
+          "name": "Hybrid Ceramic Wash & Wax",
+          "description": "Wash & Shine Package plus Hybrid Ceramic Wash & Wax, graphite spray for added exterior shine, door jambs & gas cap area cleaned with tornado gun",
           "offers": {
             "@type": "Offer",
-            "price": "149.00",
+            "price": "90.00",
             "priceCurrency": "USD"
           }
         }
@@ -151,24 +185,11 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Full Detail Package",
-          "description": "Complete interior and exterior detailing service.",
+          "name": "Deluxe Full Detail Package",
+          "description": "Complete interior and exterior detailing service with premium products and treatments for a comprehensive vehicle transformation.",
           "offers": {
             "@type": "Offer",
-            "price": "299.00",
-            "priceCurrency": "USD"
-          }
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Headlight Restoration",
-          "description": "Restore cloudy, yellowed headlights to like-new condition.",
-          "offers": {
-            "@type": "Offer",
-            "price": "99.00",
+            "price": "120.00",
             "priceCurrency": "USD"
           }
         }
@@ -184,19 +205,19 @@
     {
       "@type": "Offer",
       "name": "Referral Program",
-      "description": "Refer a friend and get $25 off your next service"
+      "description": "Refer a friend and get $20 off your next service"
     },
     {
       "@type": "Offer",
       "name": "Maintenance Plan",
-      "description": "Sign up for our quarterly maintenance plan and save 15%"
+      "description": "Sign up for our monthly maintenance plan and save 15%"
     }
   ],
   "potentialAction": {
     "@type": "ReserveAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://www.rjautodetailing.com/book",
+      "urlTemplate": "https://ramobileaestheticdetailing.com/book",
       "inLanguage": "en-US",
       "actionPlatform": [
         "http://schema.org/DesktopWebPlatform",
@@ -206,7 +227,7 @@
     },
     "result": {
       "@type": "Reservation",
-      "name": "Auto Detailing Appointment"
+      "name": "Mobile Auto Detailing Appointment"
     }
   },
   "review": [
@@ -214,35 +235,35 @@
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "John Smith"
+        "name": "Michael Johnson"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "datePublished": "2024-05-15",
-      "reviewBody": "RJ Auto Detailing did an amazing job on my Tesla Model 3. The ceramic coating looks incredible and the interior has never been cleaner. Highly recommend!"
+      "datePublished": "2023-05-15",
+      "reviewBody": "RA Mobile Aesthetic Detailing transformed my 5-year-old car into what looks like a brand new vehicle. The attention to detail was impressive, and the convenience of their mobile service made the experience even better. Highly recommend!"
     },
     {
       "@type": "Review",
       "author": {
         "@type": "Person",
-        "name": "Sarah Johnson"
+        "name": "Sarah Williams"
       },
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "datePublished": "2024-04-22",
-      "reviewBody": "I've tried several detailers in Denver, and RJ Auto Detailing is by far the best. Their attention to detail is unmatched and their prices are fair for the quality of work."
+      "datePublished": "2023-04-22",
+      "reviewBody": "I've tried several detailing services in the area, but RA Mobile Aesthetic Detailing stands out for their professionalism and quality of work. They removed stains from my seats that I thought were permanent. My car hasn't looked this good since I bought it!"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "187"
+    "reviewCount": "127"
   },
   "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "PayPal", "Venmo"],
   "currenciesAccepted": "USD"
