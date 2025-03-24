@@ -117,7 +117,7 @@
         "image": "https://www.rjautodetailing.com/images/logo.png",
         "url": "https://www.rjautodetailing.com",
         "telephone": "+13035551234",
-        "priceRange": "$99 - $249",
+        "priceRange": "$50 - $120",
         "description": "Denver's #1 auto detailing service offering professional interior, exterior, and full detail packages with mobile service options. 100% satisfaction guaranteed.",
         "slogan": "Denver's Premier Auto Detailing Service",
         "address": {
@@ -259,7 +259,7 @@
           "name": "RJ Auto Detailing",
           "image": "https://www.rjautodetailing.com/images/logo.png",
           "telephone": "+13035551234",
-          "priceRange": "$99 - $249"
+          "priceRange": "$50 - $120"
         },
         "areaServed": [
           {
@@ -285,32 +285,40 @@
         ],
         "offers": {
           "@type": "AggregateOffer",
-          "highPrice": "249",
-          "lowPrice": "99",
+          "highPrice": "120",
+          "lowPrice": "50",
           "priceCurrency": "USD",
-          "offerCount": "3",
+          "offerCount": "4",
           "offers": [
             {
               "@type": "Offer",
-              "name": "Basic Package",
-              "price": "99",
+              "name": "Basic Interior Clean",
+              "price": "60",
               "priceCurrency": "USD",
-              "description": "Exterior hand wash, tire & wheel cleaning, interior vacuum, dashboard wipe down, window cleaning"
+              "description": "Interior vacuuming (seats, floor, mats), dashboard, console & door panels wiped, windows cleaned (inside only), tornado gun to blast out dust & dirt from cracks & vents"
             },
             {
               "@type": "Offer",
-              "name": "Premium Package",
-              "price": "179",
+              "name": "Deep Interior Detail",
+              "price": "90",
               "priceCurrency": "USD",
-              "description": "Basic package plus clay bar treatment, paint polishing, wax application, deep interior cleaning, leather conditioning"
+              "description": "Basic Interior Clean plus carpet & seat extraction, leather seat cleaning & conditioning, steam cleaning for sanitization, tornado gun for deep cleaning, odor removal treatment, pet hair removal"
             },
             {
               "@type": "Offer",
-              "name": "Deluxe Package",
-              "price": "249",
+              "name": "Wash & Shine Package",
+              "price": "50",
               "priceCurrency": "USD",
-              "description": "Premium package plus engine bay cleaning, headlight restoration, paint sealant application, carpet shampooing, odor elimination, trim restoration"
+              "description": "Foam wash & rinse, hand washed with microfiber towels, tornado gun for blasting dirt, wheels & tires cleaned, tire shine application"
+            },
+            {
+              "@type": "Offer",
+              "name": "Hybrid Ceramic Wash & Wax",
+              "price": "90",
+              "priceCurrency": "USD",
+              "description": "Wash & Shine Package plus Hybrid Ceramic Wash & Wax, graphite spray for added exterior shine, door jambs & gas cap area cleaned with tornado gun"
             }
+          ]
           ]
         },
         "description": "Denver's top-rated auto detailing service offering professional interior cleaning, exterior detailing, paint correction, ceramic coating, and mobile services throughout the Denver metro area. 100% satisfaction guaranteed.",
@@ -356,7 +364,7 @@
             "name": "How much does auto detailing cost in Denver?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our auto detailing services range from $99 for our Basic Package to $249 for our comprehensive Deluxe Package. We also offer customized services based on your specific vehicle needs. All our packages include a satisfaction guarantee."
+              "text": "Our auto detailing services range from $50 for our Wash & Shine Package to $120 for our Deep Interior Detail or Hybrid Ceramic Wash & Wax. We also offer customized services based on your specific vehicle needs. All our packages include a satisfaction guarantee."
             }
           },
           {
@@ -818,81 +826,252 @@
           >
             Our Pricing
           </h2>
+
+          <!-- Service type tabs -->
+          <div
+            class="service-type-tabs"
+            style="text-align: center; margin-bottom: 30px"
+          >
+            <h3 style="margin-bottom: 15px">Choose Your Service Type</h3>
+            <div style="display: inline-block; margin: 0 15px">
+              <i
+                class="fas fa-car"
+                style="font-size: 24px; color: var(--accent-color)"
+              ></i>
+              <span style="display: block; font-weight: bold; margin-top: 5px"
+                >Interior Services</span
+              >
+            </div>
+            <div style="display: inline-block; margin: 0 15px">
+              <i
+                class="fas fa-spray-can"
+                style="font-size: 24px; color: var(--accent-color)"
+              ></i>
+              <span style="display: block; font-weight: bold; margin-top: 5px"
+                >Exterior Services</span
+              >
+            </div>
+          </div>
+
           <div class="pricing-container stagger-list">
-            <!-- Basic Package - Entry level service -->
+            <!-- INTERIOR SERVICES -->
+            <div style="width: 100%; margin-bottom: 20px">
+              <h3
+                style="
+                  text-align: center;
+                  border-bottom: 2px solid var(--accent-color);
+                  padding-bottom: 10px;
+                  margin-bottom: 30px;
+                "
+              >
+                <i class="fas fa-car"></i> Interior Services
+              </h3>
+            </div>
+
+            <!-- Basic Interior Clean Package -->
             <div
               class="pricing-card card"
               data-animate="slide-up"
               data-delay="100"
             >
+              <div
+                class="service-type-badge"
+                style="
+                  position: absolute;
+                  top: 15px;
+                  right: 15px;
+                  background-color: var(--accent-color);
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 20px;
+                  font-size: 12px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fas fa-car"></i> Interior
+              </div>
               <div class="pricing-header">
-                <h3>Basic Package</h3>
-                <div class="price">$99<span>/service</span></div>
+                <h3>Basic Interior Clean</h3>
+                <p style="margin-top: 5px; font-style: italic; color: #666">
+                  Quick refresh for your vehicle's interior
+                </p>
+                <div class="price">$60-$80<span>/service</span></div>
               </div>
               <div class="pricing-features">
                 <ul>
-                  <li>Exterior Hand Wash</li>
-                  <li>Tire & Wheel Cleaning</li>
-                  <li>Vacuum Interior</li>
-                  <li>Dashboard & Console Wipe Down</li>
-                  <li>Window Cleaning</li>
-                  <li class="not-included">Clay Bar Treatment</li>
-                  <li class="not-included">Paint Polishing</li>
-                  <li class="not-included">Engine Bay Cleaning</li>
+                  <li>Interior vacuuming (seats, floor, mats)</li>
+                  <li>Dashboard, console & door panels wiped</li>
+                  <li>Windows cleaned (inside only)</li>
+                  <li>
+                    Tornado gun to blast out dust & dirt from cracks & vents
+                  </li>
+                  <li class="not-included">Carpet & seat extraction</li>
+                  <li class="not-included">Leather conditioning</li>
+                  <li class="not-included">Steam cleaning</li>
                 </ul>
                 <button class="cta-button btn btn-primary">Book Now</button>
               </div>
             </div>
 
-            <!-- Premium Package - Most popular option with featured badge -->
+            <!-- Deep Interior Detail Package - Most popular option with featured badge -->
             <div
               class="pricing-card card featured"
               data-animate="slide-up"
               data-delay="200"
             >
               <div class="featured-badge">Most Popular</div>
+              <div
+                class="service-type-badge"
+                style="
+                  position: absolute;
+                  top: 15px;
+                  right: 15px;
+                  background-color: var(--accent-color);
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 20px;
+                  font-size: 12px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fas fa-car"></i> Interior
+              </div>
               <div class="pricing-header">
-                <h3>Premium Package</h3>
-                <div class="price">$179<span>/service</span></div>
+                <h3>Deep Interior Detail</h3>
+                <p style="margin-top: 5px; font-style: italic; color: #666">
+                  Complete interior restoration and sanitization
+                </p>
+                <div class="price">$90-$120<span>/service</span></div>
               </div>
               <div class="pricing-features">
                 <ul>
-                  <li>Everything in Basic Package</li>
-                  <li>Clay Bar Treatment</li>
-                  <li>Paint Polishing</li>
-                  <li>Wax Application</li>
-                  <li>Deep Interior Cleaning</li>
-                  <li>Leather Conditioning</li>
-                  <li class="not-included">Engine Bay Cleaning</li>
-                  <li class="not-included">Headlight Restoration</li>
+                  <li>Everything in Basic Interior Clean</li>
+                  <li>Carpet & seat extraction (deep dirt removal)</li>
+                  <li>Leather seat cleaning & conditioning</li>
+                  <li>Steam cleaning for sanitization</li>
+                  <li>
+                    Tornado gun for deep cleaning vents, crevices &
+                    hard-to-reach areas
+                  </li>
+                  <li>Odor removal treatment</li>
+                  <li>Pet hair removal (if needed)</li>
                 </ul>
                 <button class="cta-button btn btn-primary">Book Now</button>
               </div>
             </div>
 
-            <!-- Deluxe Package - Comprehensive service option -->
+            <!-- EXTERIOR SERVICES -->
+            <div style="width: 100%; margin: 30px 0 20px 0">
+              <h3
+                style="
+                  text-align: center;
+                  border-bottom: 2px solid var(--accent-color);
+                  padding-bottom: 10px;
+                  margin-bottom: 30px;
+                "
+              >
+                <i class="fas fa-spray-can"></i> Exterior Services
+              </h3>
+            </div>
+
+            <!-- Wash & Shine Package -->
             <div
               class="pricing-card card"
               data-animate="slide-up"
               data-delay="300"
             >
+              <div
+                class="service-type-badge"
+                style="
+                  position: absolute;
+                  top: 15px;
+                  right: 15px;
+                  background-color: var(--primary-color);
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 20px;
+                  font-size: 12px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fas fa-spray-can"></i> Exterior
+              </div>
               <div class="pricing-header">
-                <h3>Deluxe Package</h3>
-                <div class="price">$249<span>/service</span></div>
+                <h3>Wash & Shine Package</h3>
+                <p style="margin-top: 5px; font-style: italic; color: #666">
+                  Professional exterior cleaning and shine
+                </p>
+                <div class="price">$50-$80<span>/service</span></div>
               </div>
               <div class="pricing-features">
                 <ul>
-                  <li>Everything in Premium Package</li>
-                  <li>Engine Bay Cleaning</li>
-                  <li>Headlight Restoration</li>
-                  <li>Paint Sealant Application</li>
-                  <li>Carpet Shampooing</li>
-                  <li>Odor Elimination</li>
-                  <li>Trim Restoration</li>
+                  <li>Foam wash & rinse (Meguiar's shampoo & conditioner)</li>
+                  <li>Hand washed with microfiber towels</li>
+                  <li>Tornado gun for blasting dirt from crevices & grilles</li>
+                  <li>Wheels & tires cleaned</li>
+                  <li>Tire shine application</li>
+                  <li class="not-included">Hybrid Ceramic Wash & Wax</li>
+                  <li class="not-included">Graphite spray</li>
                 </ul>
                 <button class="cta-button btn btn-primary">Book Now</button>
               </div>
             </div>
+
+            <!-- Hybrid Ceramic Wash & Wax Package -->
+            <div
+              class="pricing-card card"
+              data-animate="slide-up"
+              data-delay="400"
+            >
+              <div
+                class="service-type-badge"
+                style="
+                  position: absolute;
+                  top: 15px;
+                  right: 15px;
+                  background-color: var(--primary-color);
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 20px;
+                  font-size: 12px;
+                  font-weight: bold;
+                "
+              >
+                <i class="fas fa-spray-can"></i> Exterior
+              </div>
+              <div class="pricing-header">
+                <h3>Hybrid Ceramic Wash & Wax</h3>
+                <p style="margin-top: 5px; font-style: italic; color: #666">
+                  Premium exterior protection and long-lasting shine
+                </p>
+                <div class="price">$90-$120<span>/service</span></div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li>Everything in Wash & Shine</li>
+                  <li>Hybrid Ceramic Wash & Wax</li>
+                  <li>Graphite spray for added exterior shine</li>
+                  <li>Door jambs & gas cap area cleaned with tornado gun</li>
+                </ul>
+                <button class="cta-button btn btn-primary">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional note about pricing -->
+          <div
+            style="
+              text-align: center;
+              margin-top: 30px;
+              padding: 15px;
+              background-color: #f8f9fa;
+              border-radius: 8px;
+            "
+          >
+            <p>
+              <strong>Note:</strong> Pricing varies based on vehicle size and
+              condition. Contact us for a precise quote.
+            </p>
           </div>
         </div>
       </section>

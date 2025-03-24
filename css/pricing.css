@@ -1,0 +1,128 @@
+/* Pricing Section Enhancements */
+
+/* Service type tabs styling */
+.service-type-tabs {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-type-tabs h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Service type badge styling */
+.service-type-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover .service-type-badge {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section dividers */
+.pricing-container h3 {
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+/* Package description styling */
+.pricing-header p {
+  margin-top: 5px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Price styling to ensure single line display */
+.price {
+  font-size: 2.5rem !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.2 !important;
+}
+
+.price span {
+  font-size: 1rem !important;
+  white-space: nowrap !important;
+  margin-left: 0.25rem !important;
+}
+
+/* Additional note box */
+.pricing-container + div {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-type-tabs {
+    padding: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .service-type-badge {
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  
+  .pricing-header p {
+    font-size: 0.85rem;
+  }
+  
+  .price {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-type-tabs {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .service-type-tabs > div {
+    margin: 0 10px;
+  }
+  
+  .service-type-tabs i {
+    font-size: 20px !important;
+  }
+  
+  .service-type-tabs span {
+    font-size: 0.9rem;
+  }
+  
+  .pricing-container h3 {
+    font-size: 1.4rem;
+  }
+  
+  .price {
+    font-size: 2rem !important;
+  }
+}
